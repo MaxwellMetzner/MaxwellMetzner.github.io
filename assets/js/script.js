@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+    console.log("Script loaded successfully");
+
     const themeToggle = document.getElementById("theme-toggle");
-    const themeText = document.getElementById("theme-text");
+    const themeStatus = document.getElementById("theme-status");
     const body = document.body;
 
     // Load saved theme from localStorage
@@ -8,13 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (savedTheme) {
         body.classList.add(savedTheme);
         themeToggle.textContent = savedTheme === "dark-mode" ? "☀️" : "🌙";
-        themeText.textContent = savedTheme === "dark-mode" ? "Light" : "Dark";
     }
 
     themeToggle.addEventListener("click", () => {
         const isDarkMode = body.classList.toggle("dark-mode");
         themeToggle.textContent = isDarkMode ? "☀️" : "🌙";
-        themeText.textContent = isDarkMode ? "Light" : "Dark";
+        themeStatus.textContent = isDarkMode ? "Dark mode enabled" : "Light mode enabled";
         localStorage.setItem("theme", isDarkMode ? "dark-mode" : "");
     });
 
