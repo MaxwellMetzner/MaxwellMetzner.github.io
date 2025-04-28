@@ -15,7 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
     themeToggle.addEventListener("click", () => {
         const isDarkMode = body.classList.toggle("dark-mode");
         themeToggle.textContent = isDarkMode ? "☀️" : "🌙";
-        themeStatus.textContent = isDarkMode ? "Dark mode enabled" : "Light mode enabled";
+        if (themeStatus) {
+            themeStatus.textContent = isDarkMode ? "Dark mode enabled" : "Light mode enabled";
+        } else {
+            console.warn("themeStatus element not found in the DOM.");
+        }
         localStorage.setItem("theme", isDarkMode ? "dark-mode" : "");
     });
 
