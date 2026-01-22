@@ -816,11 +816,7 @@ body.dark-mode .moon-icon {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: #c7d2fe;
   font-size: 0.8125rem;
-  cursor: pointer;
-}
-
-.camel-link:hover {
-  color: #ffffff;
+  cursor: default;
   text-decoration: underline;
 }
 
