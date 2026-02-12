@@ -856,6 +856,164 @@ body.dark-mode .moon-icon {
   color: white;
 }
 
+/* Stabbot App Preview */
+.stabbot-preview {
+  background: #0c0c14 !important;
+}
+
+.stabbot-app {
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.stabbot-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.stabbot-logo {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.stabbot-logo-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.stabbot-logo-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: #e8eaf0;
+  letter-spacing: -0.01em;
+}
+
+.stabbot-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border-radius: 12px;
+  background: #1a1a2e;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 9px;
+  color: #94a3b8;
+}
+
+.stabbot-badge-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #10b981;
+  flex-shrink: 0;
+}
+
+.stabbot-file-info {
+  text-align: center;
+  padding: 12px 14px 6px;
+}
+
+.stabbot-file-name {
+  font-size: 11px;
+  font-weight: 500;
+  color: #e8eaf0;
+  margin-bottom: 2px;
+}
+
+.stabbot-file-meta {
+  font-size: 9.5px;
+  color: #94a3b8;
+}
+
+.stabbot-quality-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 8px 14px;
+}
+
+.stabbot-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 12px 8px;
+  background: #1a1a2e;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.stabbot-card-icon {
+  font-size: 18px;
+  margin-bottom: 4px;
+  line-height: 1;
+}
+
+.stabbot-card-label {
+  font-size: 10px;
+  font-weight: 500;
+  color: #e8eaf0;
+}
+
+.stabbot-card-hq {
+  border-color: rgba(168, 85, 247, 0.4);
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.12);
+}
+
+.stabbot-card-custom {
+  border-color: rgba(245, 158, 11, 0.3);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.08);
+}
+
+.stabbot-card-opencv {
+  border-color: rgba(20, 184, 166, 0.3);
+  box-shadow: 0 0 12px rgba(20, 184, 166, 0.08);
+}
+
+.stabbot-card-raft {
+  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.08);
+}
+
+.stabbot-divider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 14px;
+}
+
+.stabbot-divider::before,
+.stabbot-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.stabbot-divider span {
+  font-size: 8px;
+  color: #5c6078;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.stabbot-advanced-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 4px 14px 14px;
+}
+
+.stabbot-advanced-grid .stabbot-card {
+  padding: 10px 8px;
+}
+
 /* ===================================
    Other Projects Grid
    =================================== */

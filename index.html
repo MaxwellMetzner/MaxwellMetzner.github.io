@@ -243,21 +243,21 @@
           <!-- Video Stabbot -->
           <article class="featured-project reverse reveal">
             <div class="project-content">
-              <p class="project-overline">Python • FFmpeg • CLI Tool</p>
+              <p class="project-overline">Electron • FFmpeg • OpenCV • PyTorch</p>
               <h3 class="project-title">Video Stabbot</h3>
               <div class="project-description">
                 <p>
-                  An automated video stabilization tool that uses FFmpeg's vidstabdetect and 
-                  vidstabtransform filters. The script performs two-pass processing: first analyzing 
-                  motion vectors to detect camera shake, then applying intelligent transformations 
-                  with configurable smoothing and zoom parameters.
+                  A desktop video stabilization app built with Electron featuring multiple 
+                  stabilization engines — from FFmpeg's vidstab filters to OpenCV feature tracking 
+                  and RAFT deep-learning optical flow. Includes a polished dark UI with drag-and-drop 
+                  input, real-time progress, and fully configurable parameters.
                 </p>
               </div>
               <ul class="project-tech-list">
-                <li>Python 3</li>
+                <li>Electron</li>
                 <li>FFmpeg</li>
-                <li>Motion Analysis</li>
-                <li>CLI</li>
+                <li>OpenCV</li>
+                <li>RAFT / PyTorch</li>
               </ul>
               <div class="project-links">
                 <a href="https://github.com/MaxwellMetzner/Video-Stabbot" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository: Video Stabbot">
@@ -269,22 +269,55 @@
             </div>
             <div class="project-image">
               <div class="project-image-wrapper">
-                <div class="code-preview">
+                <div class="code-preview stabbot-preview">
                   <div class="code-header">
                     <span class="dot red"></span>
                     <span class="dot yellow"></span>
                     <span class="dot green"></span>
-                    <span class="filename">stabbot.py</span>
+                    <span class="filename">Video Stabbot</span>
                   </div>
-                  <pre class="code-content"><code><span class="keyword">python</span> stabbot.py input.mp4 output.mp4
-
-<span class="comment"># Step 1: Detecting motion...</span>
-<span class="string">ffmpeg -vf vidstabdetect</span>
-
-<span class="comment"># Step 2: Applying stabilization...</span>
-<span class="string">smoothing=30, zoom=-15</span>
-
-<span class="success">✓ Video stabilized successfully!</span></code></pre>
+                  <!-- App header bar -->
+                  <div class="stabbot-app">
+                    <div class="stabbot-header">
+                      <div class="stabbot-logo">
+                        <span class="stabbot-logo-icon">&#127916;</span>
+                        <span class="stabbot-logo-text">Video Stabbot</span>
+                      </div>
+                      <div class="stabbot-badge">
+                        <span class="stabbot-badge-dot"></span>
+                        NVENC
+                      </div>
+                    </div>
+                    <!-- File info -->
+                    <div class="stabbot-file-info">
+                      <div class="stabbot-file-name">vacation_clip.mp4</div>
+                      <div class="stabbot-file-meta">1920×1080 · 30fps · 2m 14s</div>
+                    </div>
+                    <!-- Quality cards -->
+                    <div class="stabbot-quality-grid">
+                      <div class="stabbot-card stabbot-card-hq">
+                        <span class="stabbot-card-icon">&#10024;</span>
+                        <span class="stabbot-card-label">High Quality</span>
+                      </div>
+                      <div class="stabbot-card stabbot-card-custom">
+                        <span class="stabbot-card-icon">&#9881;</span>
+                        <span class="stabbot-card-label">Custom</span>
+                      </div>
+                    </div>
+                    <!-- Divider -->
+                    <div class="stabbot-divider"><span>Advanced Modes</span></div>
+                    <!-- Advanced cards -->
+                    <div class="stabbot-advanced-grid">
+                      <div class="stabbot-card stabbot-card-opencv">
+                        <span class="stabbot-card-icon">&#127919;</span>
+                        <span class="stabbot-card-label">OpenCV</span>
+                      </div>
+                      <div class="stabbot-card stabbot-card-raft">
+                        <span class="stabbot-card-icon">&#129302;</span>
+                        <span class="stabbot-card-label">RAFT AI</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
