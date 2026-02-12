@@ -25,6 +25,49 @@
   <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
   <link rel="manifest" href="site.webmanifest">
   
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Maxwell Metzner | Software Developer",
+        "url": "https://maxwellmetzner.github.io/",
+        "description": "Portfolio of Maxwell Metzner - Software Engineer specializing in Python automation, browser extensions, and algorithm development."
+      },
+      {
+        "@type": "Person",
+        "name": "Maxwell Metzner",
+        "url": "https://maxwellmetzner.github.io/",
+        "image": "https://maxwellmetzner.github.io/assets/images/selfie.png",
+        "jobTitle": "Software Engineer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Fiserv",
+          "department": "Banking Core"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Stevens Institute of Technology"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "NJ",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/maxwell-metzner/",
+          "https://github.com/MaxwellMetzner",
+          "https://www.instagram.com/maxmetzner",
+          "https://letterboxd.com/Max1234565/"
+        ],
+        "knowsAbout": ["C#", ".NET", "Python", "JavaScript", "WPF", "SQL Server", "Chrome Extensions"]
+      }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
