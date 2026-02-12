@@ -10,6 +10,7 @@
   --color-primary: #6366f1;
   --color-primary-light: #818cf8;
   --color-primary-dark: #4f46e5;
+  --color-primary-contrast: #4338ca;
   --color-accent: #06b6d4;
   --color-border: #e2e8f0;
   --color-card-bg: rgba(255, 255, 255, 0.8);
@@ -67,6 +68,7 @@ body.dark-mode {
   --color-border: #334155;
   --color-card-bg: rgba(30, 41, 59, 0.8);
   --color-code-bg: #0f172a;
+  --color-primary-contrast: #a5b4fc;
   --gradient-bg: radial-gradient(ellipse at top, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
                  radial-gradient(ellipse at bottom, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
 }
@@ -630,7 +632,7 @@ body.dark-mode .moon-icon {
 .title-number {
   font-family: var(--font-mono);
   font-size: 1.25rem;
-  color: var(--color-primary);
+  color: var(--color-primary-contrast);
   font-weight: 400;
 }
 
