@@ -1,20 +1,20 @@
 {
   "selectionCriteria": [
     {
-      "name": "Technical depth",
-      "description": "Projects with real algorithms, engine design, worker pipelines, platform APIs, or meaningful architecture rank higher than simple UI exercises."
+      "name": "Visible mechanics",
+      "description": "Featured projects should expose the actual solver, worker, ranking, auth, desktop, or data-table pieces behind the UI."
     },
     {
-      "name": "Portfolio signal",
-      "description": "Featured work should quickly communicate judgment, ownership, polish, and the ability to ship complete tools."
+      "name": "Inspectable product surface",
+      "description": "The work should have a demo or source path where a visitor can verify the behavior instead of only reading claims."
     },
     {
-      "name": "User value",
-      "description": "A stronger project solves a specific workflow pain, has clear users, and explains why the implementation choices matter."
+      "name": "Workflow value",
+      "description": "The project should solve a concrete task: solving a puzzle, planning stops, stabilizing video, editing playlists, or analyzing games."
     },
     {
-      "name": "Demo quality",
-      "description": "Live static demos and visual previews get priority because they let visitors verify the work immediately."
+      "name": "Honest previews",
+      "description": "Miniatures should resemble the real app surfaces, especially for web apps with their own CSS and layout language."
     }
   ],
   "projects": [
@@ -29,14 +29,14 @@
       "featured": true,
       "accent": "#f97316",
       "updated": "2026-04-28",
-      "headline": "A browser-only casino analysis suite built around exact combinatorics and evaluator-backed poker equity tools.",
-      "description": "Combines rule-driven analyzers for roulette, baccarat, craps, blackjack, video poker, three-card poker, and pai gow with poker equity tooling for Hold'em, Omaha, and seven-card stud. Heavy analyzers run in browser workers so the UI stays responsive on GitHub Pages.",
-      "whyFeatured": "This is the strongest portfolio signal: static deployment constraints, serious math, multi-page product thinking, and separated engine/frontend architecture.",
+      "headline": "Static Next.js dashboard with separate analyzers for roulette, baccarat, craps, blackjack, video poker, pai gow, and poker equity.",
+      "description": "Splits a pure TypeScript casino engine package from the web UI, then pushes slower equity and simulation work through a browser worker. Visitors can test combined roulette bets, finite-shoe blackjack EV, video-poker holds, and multiway Hold'em/Omaha/stud without any server runtime.",
+      "whyFeatured": "The important files are easy to inspect: packages/casino-engine/src owns the math, while apps/web/src/workers/casino-worker.ts keeps the static UI responsive.",
       "tech": ["TypeScript", "Next.js export", "Web Workers", "Combinatorics", "EV solving"],
       "metrics": [
-        { "label": "Analyzers", "value": "10" },
-        { "label": "Runtime", "value": "Static" },
-        { "label": "Core", "value": "Pure engines" }
+        { "label": "Live pages", "value": "10" },
+        { "label": "Worker", "value": "casino-worker" },
+        { "label": "Engine", "value": "TS package" }
       ],
       "links": {
         "repo": "https://github.com/MaxwellMetzner/Casino-Cheat-Sheet",
@@ -55,14 +55,14 @@
       "featured": true,
       "accent": "#2563eb",
       "updated": "2026-04-21",
-      "headline": "A collection of browser solvers for LinkedIn's daily puzzle games.",
-      "description": "Solves Zip, Tango, Queens, Patches, and Mini Sudoku with puzzle-specific validation, constraint propagation, and pruned backtracking. The interface makes clues, generated cells, and impossible states visible so the solver feels inspectable rather than magical.",
-      "whyFeatured": "It makes algorithms tangible, has a clean static deployment story, and shows careful interaction design around complex state.",
+      "headline": "Plain HTML/CSS/JS solver surface for Zip, Tango, Queens, Patches, and Mini Sudoku.",
+      "description": "Each puzzle has its own grid/input layer and solver file under js/solvers. The app validates impossible boards before search, then marks clues, generated cells, conflicts, and solved paths in the same interface used to enter the puzzle.",
+      "whyFeatured": "The value is visible in the UI: tabs, board editing, solve/reset controls, and solver-specific feedback rather than a black-box answer.",
       "tech": ["JavaScript", "Backtracking", "Constraint propagation", "DFS", "Static UI"],
       "metrics": [
-        { "label": "Solvers", "value": "5" },
-        { "label": "Deploy", "value": "No build" },
-        { "label": "Mode", "value": "Interactive" }
+        { "label": "Solver files", "value": "5" },
+        { "label": "UI", "value": "Plain JS" },
+        { "label": "Validation", "value": "Before search" }
       ],
       "links": {
         "repo": "https://github.com/MaxwellMetzner/LinkedinSolver",
@@ -81,14 +81,14 @@
       "featured": true,
       "accent": "#dc2626",
       "updated": "2026-03-30",
-      "headline": "A playable Farkle game paired with exact expected-value strategy tools.",
-      "description": "Runs human-vs-CPU games in the browser, highlights legal scoring choices, precomputes expected-value tables for one through six dice, and includes a state advisor for custom score situations. It is part game, part explainable decision engine.",
-      "whyFeatured": "It turns probability into a product experience and shows applied math without needing a backend.",
+      "headline": "Playable human-vs-CPU Farkle with exact EV tables and an advisor panel.",
+      "description": "Precomputes expected values for one through six remaining dice, highlights legal scoring choices after each roll, and compares roll-vs-bank decisions against score, target, and late-game pressure.",
+      "whyFeatured": "Open app.js and the demo side by side: the game loop, scoring choices, CPU decisions, and advisor all share the same EV logic.",
       "tech": ["JavaScript", "Expected value", "Game AI", "Probability", "CSS"],
       "metrics": [
-        { "label": "Dice states", "value": "1-6" },
-        { "label": "Mode", "value": "CPU" },
-        { "label": "Advisor", "value": "Exact EV" }
+        { "label": "EV tables", "value": "1-6 dice" },
+        { "label": "Opponent", "value": "CPU" },
+        { "label": "Advisor", "value": "Roll/bank" }
       ],
       "links": {
         "repo": "https://github.com/MaxwellMetzner/Farkle",
@@ -107,14 +107,14 @@
       "featured": true,
       "accent": "#16a34a",
       "updated": "2026-03-20",
-      "headline": "A GitHub Pages-friendly playlist editor with PKCE auth and analysis workflows.",
-      "description": "Handles Spotify OAuth in the browser, loads playlist metadata, supports sorting, filtering, deduping, custom ordering, outlier detection, transition diagnostics, and playlist export. It treats a static host like a serious application surface.",
-      "whyFeatured": "It demonstrates careful static OAuth, data-table UX, and local-first workflow design.",
+      "headline": "Dark, table-first playlist workspace with browser-only Spotify PKCE auth.",
+      "description": "After setup, the app loads playlists, supports CSV-enriched metadata, sortable/resizable Tabulator columns, dedupe review, outlier scoring, transition diagnostics, undo/redo, and export to a new Spotify playlist.",
+      "whyFeatured": "It shows real product constraints in static hosting: OAuth callback pages, local token/config storage, and a dense data-table workflow.",
       "tech": ["JavaScript", "Spotify API", "OAuth PKCE", "Local storage", "Data tables"],
       "metrics": [
         { "label": "Auth", "value": "PKCE" },
-        { "label": "Host", "value": "Pages" },
-        { "label": "Workflow", "value": "Playlist ops" }
+        { "label": "Table", "value": "Tabulator" },
+        { "label": "History", "value": "Undo/redo" }
       ],
       "links": {
         "repo": "https://github.com/MaxwellMetzner/Spotify-Manager",
@@ -133,14 +133,14 @@
       "featured": true,
       "accent": "#0891b2",
       "updated": "2026-03-01",
-      "headline": "A professional video stabilization desktop app with multiple motion-analysis engines.",
-      "description": "Combines Electron, FFmpeg vidstab, OpenCV feature tracking, and RAFT optical flow behind a polished UI with dependency detection, progress reporting, drag-and-drop input, GPU encoder detection, and configurable stabilization parameters.",
-      "whyFeatured": "It is visually interesting and technically ambitious across desktop, media processing, Python integration, and AI-assisted motion analysis.",
+      "headline": "Electron video stabilization UI that wraps FFmpeg vidstab, OpenCV features, and RAFT optical flow.",
+      "description": "Detects dependencies and GPU encoders, accepts drag-and-drop video input, offers preset and advanced stabilization modes, streams progress, and calls Python/OpenCV/PyTorch scripts for heavier analysis paths.",
+      "whyFeatured": "This is a desktop systems sample: renderer UX, main-process detection, external binaries, Python workers, and media pipelines have to cooperate.",
       "tech": ["Electron", "FFmpeg", "OpenCV", "PyTorch", "RAFT"],
       "metrics": [
-        { "label": "Modes", "value": "4" },
-        { "label": "GPU", "value": "Auto" },
-        { "label": "Flow", "value": "RAFT" }
+        { "label": "Input", "value": "Drag/drop" },
+        { "label": "Engines", "value": "3 paths" },
+        { "label": "Encoder", "value": "GPU detect" }
       ],
       "links": {
         "repo": "https://github.com/MaxwellMetzner/Video-Stabbot"
@@ -158,14 +158,14 @@
       "featured": true,
       "accent": "#0f766e",
       "updated": "2026-03-31",
-      "headline": "A route-aware itinerary planner that ranks stops against the trip timeline.",
-      "description": "Plans meal, coffee, rest, scenic, hike, attraction, gas, EV charging, and surprise stops using slot fit, detour cost, daylight, open-hours, review quality, and preference fit. It keeps a demo mode fully client-side while allowing Google Maps enhancement.",
-      "whyFeatured": "It shows product architecture under static hosting constraints and exposes ranking decisions rather than hiding them.",
+      "headline": "React/Vite itinerary planner that scores stops against route timing, detour, daylight, and preferences.",
+      "description": "The guided form builds a route request, then the planner slots meals and optional stops into a timeline. It can run in deterministic demo mode or browser-side Google mode, with local saved trips and explanations for each recommendation.",
+      "whyFeatured": "The ranking pipeline is visible in src/lib/planner: slots, scoring, daylight, provider adapters, and replace/pin/skip interactions stay client-side.",
       "tech": ["TypeScript", "React", "Vite", "Routing", "Local storage"],
       "metrics": [
-        { "label": "Modes", "value": "Demo/API" },
-        { "label": "Ranking", "value": "Weighted" },
-        { "label": "Host", "value": "Static" }
+        { "label": "Planner", "value": "Client-side" },
+        { "label": "Modes", "value": "Demo/Google" },
+        { "label": "Explain", "value": "Score reasons" }
       ],
       "links": {
         "repo": "https://github.com/MaxwellMetzner/Trip-Planner"

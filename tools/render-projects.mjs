@@ -144,49 +144,93 @@ function renderPreview(project) {
   switch (project.preview) {
     case 'casino':
       return `<div class="preview preview--casino">
-                <div class="preview-header"><span>edge.engine.ts</span><strong>EV</strong></div>
-                <div class="odds-board">
-                  <span>Blackjack</span><b>+0.42</b>
-                  <span>Video poker</span><b>Hold 3</b>
-                  <span>Hold'em</span><b>67%</b>
-                  <span>Craps</span><b>-1.41</b>
+                <div class="mini-casino-hero">
+                  <span>Casino Cheat Sheet</span>
+                  <strong>Exact analyzers</strong>
+                  <p>Finite-shoe blackjack, poker equity, and rule-driven table games.</p>
                 </div>
-                <div class="worker-line"><i></i><i></i><i></i><span>worker queue</span></div>
+                <div class="mini-casino-grid">
+                  <span><b>Blackjack</b><em>EV solve</em></span>
+                  <span><b>Video poker</b><em>Hold rank</em></span>
+                  <span><b>Hold'em</b><em>Equity</em></span>
+                  <span><b>Craps</b><em>Table state</em></span>
+                </div>
+                <div class="mini-worker"><i></i><i></i><i></i><span>browser worker queue</span></div>
               </div>`;
     case 'puzzle':
       return `<div class="preview preview--puzzle">
-                <div class="preview-header"><span>constraint map</span><strong>SOLVED</strong></div>
-                <div class="puzzle-board">
-                  ${['', 'Q', '', '', '', '', '', 'Q', '', 'Q', '', '', '', '', 'Q', '', '', '', '', 'Q', '', '', '', '', ''].map((cell) => `<span>${cell}</span>`).join('')}
+                <div class="mini-linkedin-bar"><b>in</b><span>LinkedIn Puzzle Solver</span></div>
+                <div class="mini-tabs"><span class="active">Queens</span><span>Tango</span><span>Zip</span></div>
+                <div class="mini-puzzle-layout">
+                  <div class="mini-puzzle-board">
+                    ${['', 'Q', '', '', '', '', '', '', 'Q', '', 'Q', '', '', '', '', '', '', '', 'Q', '', '', 'Q', '', '', ''].map((cell, cellIndex) => `<span class="${cell ? 'queen' : cellIndex % 4 === 0 ? 'region-a' : cellIndex % 3 === 0 ? 'region-b' : ''}">${cell}</span>`).join('')}
+                  </div>
+                  <div class="mini-solver-panel">
+                    <strong>Solve</strong>
+                    <span>valid board</span>
+                    <span>5 queens</span>
+                    <span>no conflicts</span>
+                  </div>
                 </div>
               </div>`;
     case 'dice':
       return `<div class="preview preview--dice">
-                <div class="preview-header"><span>turn advisor</span><strong>EV +148</strong></div>
-                <div class="dice-row"><span>1</span><span>5</span><span>5</span><span>2</span><span>6</span><span>1</span></div>
-                <div class="ev-bars"><i style="--h: 78%"></i><i style="--h: 48%"></i><i style="--h: 62%"></i><i style="--h: 34%"></i><i style="--h: 88%"></i></div>
+                <div class="mini-farkle-header"><strong>Farkle Lab</strong><span>Turn total 750</span></div>
+                <div class="mini-score-grid">
+                  <span><b>You</b><em>6,450</em></span>
+                  <span><b>CPU</b><em>5,900</em></span>
+                  <span><b>Target</b><em>10,000</em></span>
+                </div>
+                <div class="mini-dice-tray"><span>1</span><span>5</span><span>5</span><span>2</span><span>6</span><span>1</span></div>
+                <div class="mini-advisor"><b>Recommended action</b><span>ROLL</span><em>Roll EV 948.2 / Bank EV 750.0</em></div>
               </div>`;
     case 'playlist':
       return `<div class="preview preview--playlist">
-                <div class="preview-header"><span>mix assist</span><strong>PKCE</strong></div>
-                <div class="track-list">
-                  <span><b></b>Energy 0.82</span>
-                  <span><b></b>Tempo 124</span>
-                  <span><b></b>Valence 0.68</span>
-                  <span><b></b>Outlier low</span>
+                <div class="mini-spotify-app">
+                  <aside>
+                    <strong>Spotify Manager</strong>
+                    <span class="mini-spotify-button">Connect Spotify</span>
+                    <span class="active">Road Trip Mix</span>
+                    <span>Workout</span>
+                  </aside>
+                  <main>
+                    <div class="mini-spotify-toolbar"><span>Columns</span><span>Shuffle</span><b>Export</b></div>
+                    <div class="mini-table">
+                      <span>Title</span><span>BPM</span><span>Energy</span>
+                      <span>Night Drive</span><span>124</span><span>0.82</span>
+                      <span>Arcade Bloom</span><span>118</span><span>0.74</span>
+                      <span>Static Heart</span><span>132</span><span>0.89</span>
+                    </div>
+                    <div class="mini-ribbon"><b>Mix Assist</b><span>Transition diagnostics</span></div>
+                  </main>
                 </div>
               </div>`;
     case 'video':
       return `<div class="preview preview--video">
-                <div class="preview-header"><span>motion field</span><strong>RAFT</strong></div>
-                <div class="frame-stack"><i></i><i></i><i></i></div>
-                <div class="motion-lines"><span></span><span></span><span></span><span></span></div>
+                <div class="mini-stabbot-header"><strong>Video Stabbot</strong><span>NVENC ready</span></div>
+                <div class="mini-drop-zone">
+                  <b>Drop video file here</b>
+                  <span>MP4, AVI, MOV, MKV, WEBM</span>
+                </div>
+                <div class="mini-stabbot-modes">
+                  <span><b>OpenCV</b><em>SIFT/ORB/AKAZE</em></span>
+                  <span><b>RAFT</b><em>Dense optical flow</em></span>
+                </div>
+                <div class="mini-progress"><i></i><span>Stabilizing 62%</span></div>
               </div>`;
     case 'route':
       return `<div class="preview preview--route">
-                <div class="preview-header"><span>route scorer</span><strong>STATIC</strong></div>
-                <div class="route-line"><i></i><i></i><i></i><i></i></div>
-                <div class="route-stops"><span>Coffee</span><span>Lunch</span><span>Scenic</span></div>
+                <div class="mini-trip-steps">
+                  <span class="complete"><b>1</b>Locations</span>
+                  <span class="active"><b>2</b>Travel</span>
+                  <span><b>3</b>Stops</span>
+                </div>
+                <div class="mini-route-map"><i></i><i></i><i></i><i></i></div>
+                <div class="mini-timeline">
+                  <span><b>10:20</b>Coffee / score 0.84</span>
+                  <span><b>12:45</b>Lunch / 8 min detour</span>
+                  <span><b>15:10</b>Scenic stop / daylight fit</span>
+                </div>
               </div>`;
     default:
       return `<div class="preview preview--terminal">
