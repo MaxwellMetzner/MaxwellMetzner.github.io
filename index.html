@@ -4,41 +4,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Maxwell Metzner - Software Developer specializing in Python automation, browser extensions, and algorithm development.">
-  <meta name="keywords"
-    content="Maxwell Metzner, Software Developer, Python, Chrome Extensions, Algorithms, Portfolio">
+  <meta name="description" content="Maxwell Metzner is a software engineer building browser-native tools, automation systems, desktop utilities, and algorithmic web apps.">
+  <meta name="keywords" content="Maxwell Metzner, software engineer, portfolio, static web apps, browser extensions, Python tools, TypeScript, C#, automation">
   <meta name="author" content="Maxwell Metzner">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://maxwellmetzner.github.io/">
+
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Maxwell Metzner | Software Engineer & Full-Stack Developer">
-  <meta property="og:description"
-    content="Explore the portfolio of Maxwell Metzner - Software Engineer at Fiserv, specializing in enterprise banking solutions, Python automation, and browser extensions.">
+  <meta property="og:title" content="Maxwell Metzner | Software Engineer">
+  <meta property="og:description" content="Distinctive static portfolio for Maxwell Metzner, featuring algorithmic solvers, browser extensions, desktop tools, and production-minded project systems.">
   <meta property="og:image" content="https://maxwellmetzner.github.io/assets/images/preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://maxwellmetzner.github.io/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://maxwellmetzner.github.io/assets/images/preview.png">
-  <title>Maxwell Metzner | Software Developer</title>
-  
-  <!-- Favicons -->
+  <meta name="theme-color" content="#111827">
+
+  <title>Maxwell Metzner | Software Engineer</title>
+
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
   <link rel="manifest" href="site.webmanifest">
-  
-  <!-- Structured Data (JSON-LD) -->
+  <link rel="preload" as="image" href="assets/images/selfie.webp" type="image/webp" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+    } catch (error) {
+      document.documentElement.dataset.theme = 'light';
+    }
+  </script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "WebSite",
-        "name": "Maxwell Metzner | Software Developer",
+        "name": "Maxwell Metzner Portfolio",
         "url": "https://maxwellmetzner.github.io/",
-        "description": "Portfolio of Maxwell Metzner - Software Engineer specializing in Python automation, browser extensions, and algorithm development."
+        "description": "Portfolio of Maxwell Metzner, software engineer focused on static web apps, automation, browser extensions, desktop tooling, and algorithmic systems."
       },
       {
         "@type": "Person",
@@ -48,8 +59,7 @@
         "jobTitle": "Software Engineer",
         "worksFor": {
           "@type": "Organization",
-          "name": "Fiserv",
-          "department": "Banking Core"
+          "name": "Fiserv"
         },
         "alumniOf": {
           "@type": "CollegeOrUniversity",
@@ -61,620 +71,1059 @@
           "addressCountry": "US"
         },
         "sameAs": [
-          "https://www.linkedin.com/in/maxwell-metzner/",
           "https://github.com/MaxwellMetzner",
-          "https://www.instagram.com/maxmetzner",
-          "https://letterboxd.com/Max1234565/"
+          "https://www.linkedin.com/in/maxwell-metzner/"
         ],
-        "knowsAbout": ["C#", ".NET", "Python", "JavaScript", "WPF", "SQL Server", "Chrome Extensions"]
+        "knowsAbout": [
+          "C#",
+          ".NET",
+          "Python",
+          "JavaScript",
+          "TypeScript",
+          "Chrome Extensions",
+          "Static Web Apps",
+          "Automation"
+        ]
       }
     ]
   }
   </script>
+  <!-- PROJECT_STRUCTURED_DATA_START -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Maxwell Metzner featured software projects",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "SoftwareSourceCode",
+        "name": "Casino Cheat Sheet",
+        "description": "A browser-only casino analysis suite built around exact combinatorics and evaluator-backed poker equity tools.",
+        "codeRepository": "https://github.com/MaxwellMetzner/Casino-Cheat-Sheet",
+        "url": "https://maxwellmetzner.github.io/Casino-Cheat-Sheet/",
+        "programmingLanguage": "TypeScript",
+        "applicationCategory": "Analysis Engines"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "SoftwareSourceCode",
+        "name": "LinkedIn Puzzle Solver",
+        "description": "A collection of browser solvers for LinkedIn's daily puzzle games.",
+        "codeRepository": "https://github.com/MaxwellMetzner/LinkedinSolver",
+        "url": "https://maxwellmetzner.github.io/LinkedinSolver/",
+        "programmingLanguage": "JavaScript",
+        "applicationCategory": "Algorithms"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "SoftwareSourceCode",
+        "name": "Farkle Lab",
+        "description": "A playable Farkle game paired with exact expected-value strategy tools.",
+        "codeRepository": "https://github.com/MaxwellMetzner/Farkle",
+        "url": "https://maxwellmetzner.github.io/Farkle/",
+        "programmingLanguage": "JavaScript",
+        "applicationCategory": "Game Theory"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "SoftwareSourceCode",
+        "name": "Spotify Manager",
+        "description": "A GitHub Pages-friendly playlist editor with PKCE auth and analysis workflows.",
+        "codeRepository": "https://github.com/MaxwellMetzner/Spotify-Manager",
+        "url": "https://maxwellmetzner.github.io/Spotify-Manager/",
+        "programmingLanguage": "JavaScript",
+        "applicationCategory": "Data Workflow"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "SoftwareSourceCode",
+        "name": "Video Stabbot",
+        "description": "A professional video stabilization desktop app with multiple motion-analysis engines.",
+        "codeRepository": "https://github.com/MaxwellMetzner/Video-Stabbot",
+        "url": "https://github.com/MaxwellMetzner/Video-Stabbot",
+        "programmingLanguage": "Electron",
+        "applicationCategory": "Media Tools"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "SoftwareSourceCode",
+        "name": "Trip Planner",
+        "description": "A route-aware itinerary planner that ranks stops against the trip timeline.",
+        "codeRepository": "https://github.com/MaxwellMetzner/Trip-Planner",
+        "url": "https://github.com/MaxwellMetzner/Trip-Planner",
+        "programmingLanguage": "TypeScript",
+        "applicationCategory": "Planning Systems"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "SoftwareSourceCode",
+        "name": "Regex Isolator",
+        "description": "A zero-dependency regex workbench for testing patterns against large text.",
+        "codeRepository": "https://github.com/MaxwellMetzner/Regex-Isolator",
+        "url": "https://github.com/MaxwellMetzner/Regex-Isolator",
+        "programmingLanguage": "Python",
+        "applicationCategory": "Developer Tools"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+        "@type": "SoftwareSourceCode",
+        "name": "Tab Volume Adjuster",
+        "description": "A focused Manifest V3 extension for per-site tab volume and mono audio.",
+        "codeRepository": "https://github.com/MaxwellMetzner/Volume-Adjuster",
+        "url": "https://github.com/MaxwellMetzner/Volume-Adjuster",
+        "programmingLanguage": "TypeScript",
+        "applicationCategory": "Browser Extensions"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "item": {
+        "@type": "SoftwareSourceCode",
+        "name": "Chess.com Lichess Link",
+        "description": "A one-click PGN bridge from Chess.com games to Lichess imports.",
+        "codeRepository": "https://github.com/MaxwellMetzner/Chess.com-Lichess-Link",
+        "url": "https://github.com/MaxwellMetzner/Chess.com-Lichess-Link",
+        "programmingLanguage": "TypeScript",
+        "applicationCategory": "Browser Extensions"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "item": {
+        "@type": "SoftwareSourceCode",
+        "name": "Amazon Bestseller Extractor",
+        "description": "A scoped extension for extracting Amazon Best Sellers Rank data from product pages.",
+        "codeRepository": "https://github.com/MaxwellMetzner/Amazon-Bestseller-Extractor",
+        "url": "https://github.com/MaxwellMetzner/Amazon-Bestseller-Extractor",
+        "programmingLanguage": "JavaScript",
+        "applicationCategory": "Browser Extensions"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "item": {
+        "@type": "SoftwareSourceCode",
+        "name": "Instagram Saver",
+        "description": "A media downloader for Instagram pages available in the user's browser session.",
+        "codeRepository": "https://github.com/MaxwellMetzner/Instagram-Saver",
+        "url": "https://github.com/MaxwellMetzner/Instagram-Saver",
+        "programmingLanguage": "JavaScript",
+        "applicationCategory": "Browser Extensions"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "item": {
+        "@type": "SoftwareSourceCode",
+        "name": "Steam OneNote Sync",
+        "description": "A bidirectional sync bridge between local Steam game notes and Microsoft OneNote.",
+        "codeRepository": "https://github.com/MaxwellMetzner/Steam-OneNote-Sync",
+        "url": "https://github.com/MaxwellMetzner/Steam-OneNote-Sync",
+        "programmingLanguage": "Python",
+        "applicationCategory": "Sync Systems"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "item": {
+        "@type": "SoftwareSourceCode",
+        "name": "PATH Manager",
+        "description": "A safer Windows PATH editor with diagnostics, backups, and diff previews.",
+        "codeRepository": "https://github.com/MaxwellMetzner/PATH-Manager",
+        "url": "https://github.com/MaxwellMetzner/PATH-Manager",
+        "programmingLanguage": "Python",
+        "applicationCategory": "Windows Tools"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "item": {
+        "@type": "SoftwareSourceCode",
+        "name": "Lossless Scaling Wrapper",
+        "description": "A Windows launcher that starts Lossless Scaling, launches a game, and restores focus.",
+        "codeRepository": "https://github.com/MaxwellMetzner/Lossless-Scaling-Wrapper",
+        "url": "https://github.com/MaxwellMetzner/Lossless-Scaling-Wrapper",
+        "programmingLanguage": "C#",
+        "applicationCategory": "Game Tools"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "item": {
+        "@type": "SoftwareSourceCode",
+        "name": "Chrome Extension Code Viewer",
+        "description": "A local extension explorer with permission risk scoring and entry-point maps.",
+        "codeRepository": "https://github.com/MaxwellMetzner/Chrome-Extension-Code-Viewer",
+        "url": "https://github.com/MaxwellMetzner/Chrome-Extension-Code-Viewer",
+        "programmingLanguage": "PowerShell",
+        "applicationCategory": "Security Tools"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "item": {
+        "@type": "SoftwareSourceCode",
+        "name": "Autoclicker",
+        "description": "A compact always-on-top autoclicker built only with Python standard libraries.",
+        "codeRepository": "https://github.com/MaxwellMetzner/Autoclicker",
+        "url": "https://github.com/MaxwellMetzner/Autoclicker",
+        "programmingLanguage": "Python",
+        "applicationCategory": "Windows Tools"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "item": {
+        "@type": "SoftwareSourceCode",
+        "name": "2048 Game",
+        "description": "A Python implementation of the 2048 tile-merging game.",
+        "codeRepository": "https://github.com/MaxwellMetzner/2048-Game",
+        "url": "https://github.com/MaxwellMetzner/2048-Game",
+        "programmingLanguage": "Python",
+        "applicationCategory": "Games"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "item": {
+        "@type": "SoftwareSourceCode",
+        "name": "GitHub Profile Config",
+        "description": "The profile README and GitHub profile configuration repository.",
+        "codeRepository": "https://github.com/MaxwellMetzner/MaxwellMetzner",
+        "url": "https://github.com/MaxwellMetzner/MaxwellMetzner",
+        "programmingLanguage": "Markdown",
+        "applicationCategory": "Profile"
+      }
+    }
+  ]
+}
+  </script>
+<!-- PROJECT_STRUCTURED_DATA_END -->
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap">
-  </noscript>
-  <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="assets/css/style.css">
-  </noscript>
   <script src="assets/js/script.js" defer></script>
 </head>
 
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <!-- Animated background -->
-  <div class="bg-animation">
-    <div class="bg-gradient"></div>
-    <div class="bg-grid"></div>
-  </div>
+  <canvas id="signal-canvas" aria-hidden="true"></canvas>
+  <div class="page-noise" aria-hidden="true"></div>
 
-  <!-- Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#" class="nav-logo">
-        <span class="logo-bracket">&lt;</span>MM<span class="logo-bracket">/&gt;</span>
-      </a>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-menu" id="nav-menu">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">
-        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
-        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-      </button>
-    </div>
-  </nav>
+  <header class="site-header" id="site-header">
+    <a class="brand" href="#home" aria-label="Maxwell Metzner home">
+      <span class="brand-mark">MM</span>
+      <span class="brand-text">Maxwell Metzner</span>
+    </a>
+
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+      <a href="#projects">Projects</a>
+      <a href="#system">System</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme">
+      <svg class="icon-sun" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <path d="M12 4V2M12 22v-2M4 12H2M22 12h-2M5 5 3.6 3.6M20.4 20.4 19 19M19 5l1.4-1.4M3.6 20.4 5 19M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <svg class="icon-moon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <path d="M20.5 14.7A8.5 8.5 0 0 1 9.3 3.5 8.6 8.6 0 1 0 20.5 14.7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </header>
 
   <main id="main-content">
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <div class="hero-text">
-          <p class="hero-greeting animate-fade-up">Hi, my name is</p>
-          <h1 class="hero-name animate-fade-up delay-1">Maxwell Metzner</h1>
-          <h2 class="hero-title animate-fade-up delay-2">I build things for the web & beyond.</h2>
-          <p class="hero-description animate-fade-up delay-3">
-            Software Developer specializing in creating innovative tools, automation scripts, 
-            and browser extensions. Currently working at Fiserv building enterprise banking solutions.
-          </p>
-          <div class="hero-cta animate-fade-up delay-4">
-            <a href="#projects" class="btn btn-primary">View My Work</a>
-            <a href="#contact" class="btn btn-outline">Get In Touch</a>
+    <section class="hero section-band" id="home">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Software engineer / static-first product builder</p>
+          <h1>Maxwell Metzner</h1>
+          <p class="hero-lede">I build complete tools that make complicated workflows feel usable: browser extensions, desktop utilities, solver engines, and static web apps that do real work without a server.</p>
+          <div class="hero-actions">
+            <a class="button button--primary" href="#projects">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>View Projects</span>
+            </a>
+            <a class="button" href="resume.pdf" target="_blank" rel="noopener">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7l-5-5ZM14 2v5h5M9 14h6M9 18h6M9 10h1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Resume</span>
+            </a>
           </div>
+          <ul class="hero-signals" aria-label="Core strengths">
+            <li><strong>Static apps</strong><span>GitHub Pages, OAuth PKCE, local-first state</span></li>
+            <li><strong>Automation</strong><span>Python, PowerShell, Windows tooling, sync flows</span></li>
+            <li><strong>Engines</strong><span>Solvers, expected value, browser workers, data workflows</span></li>
+          </ul>
         </div>
-        <div class="hero-image animate-fade-up delay-2">
-          <div class="profile-card">
-            <div class="profile-image-wrapper">
-              <img src="assets/images/selfie.png" alt="Maxwell Metzner" class="profile-image" width="320" height="320" decoding="async" fetchpriority="high">
-            </div>
-            <div class="profile-glow"></div>
+
+        <div class="hero-visual">
+          <picture class="portrait">
+            <source srcset="assets/images/selfie.webp" type="image/webp">
+            <img src="assets/images/selfie.png" alt="Maxwell Metzner" width="320" height="320" decoding="async" fetchpriority="high">
+          </picture>
+          <div class="build-readout" aria-label="Current portfolio focus">
+            <div><span>Mode</span><strong>Static-first</strong></div>
+            <div><span>Featured</span><strong>6 systems</strong></div>
+            <div><span>Project data</span><strong>JSON</strong></div>
+            <div><span>Runtime</span><strong>No backend</strong></div>
           </div>
         </div>
       </div>
-      <div class="scroll-indicator">
-        <div class="mouse">
-          <div class="wheel"></div>
-        </div>
-        <p>Scroll to explore</p>
+
+      <div class="hero-next" aria-label="Portfolio summary">
+        <a href="#projects"><span>01</span> Flagship project systems</a>
+        <a href="#system"><span>02</span> Static architecture</a>
+        <a href="#contact"><span>03</span> Contact</a>
       </div>
     </section>
 
-    <!-- Featured Projects Section -->
-    <section id="projects" class="section projects-section">
+    <section class="projects section-band" id="projects">
       <div class="container">
-        <h2 class="section-title">
-          <span class="title-number">01.</span>
-          Featured Projects
-        </h2>
-        <p class="section-subtitle">Here are some of my recent personal projects</p>
-        
-        <div class="featured-projects">
-          <!-- LinkedIn Solver -->
-          <article class="featured-project reveal">
-            <div class="project-content">
-              <p class="project-overline">Algorithms • JavaScript • Puzzle Solving</p>
-              <h3 class="project-title">LinkedIn Puzzle Solver</h3>
-              <div class="project-description">
-                <p>
-                  A collection of solvers for LinkedIn's daily puzzles including Zip, Queens, 
-                  Tango, and Mini Sudoku. Features constraint propagation, depth-first backtracking, 
-                  and puzzle-specific domain checks. Includes an interactive UI with visual feedback 
-                  for clues, solutions, and conflicts.
-                </p>
+        <div class="section-heading">
+          <p class="eyebrow">Selected work</p>
+          <h2>Projects chosen for depth, usefulness, and immediacy.</h2>
+          <p>The top tier favors work with non-trivial engines, credible product surfaces, and a quick way for a visitor to inspect the result.</p>
+        </div>
+
+        <div class="criteria-strip" aria-label="Project selection criteria">
+          <article>
+            <span>Depth</span>
+            <p>Algorithms, platform APIs, workers, sync engines, and real architectural constraints.</p>
+          </article>
+          <article>
+            <span>Signal</span>
+            <p>Complete products that show ownership, polish, and judgment under constraints.</p>
+          </article>
+          <article>
+            <span>Usefulness</span>
+            <p>Specific workflow value, not just screenshots or isolated experiments.</p>
+          </article>
+          <article>
+            <span>Demo</span>
+            <p>Live static experiences and visual previews are promoted when available.</p>
+          </article>
+        </div>
+
+        <div class="project-toolbar" data-project-controls>
+          <div class="filter-group" role="group" aria-label="Filter projects">
+            <button class="filter-button active" type="button" data-filter="all">All</button>
+            <button class="filter-button" type="button" data-filter="Live demo">Demos</button>
+            <button class="filter-button" type="button" data-filter="Browser Extensions">Extensions</button>
+            <button class="filter-button" type="button" data-filter="Windows Tools">Windows</button>
+          </div>
+          <label class="search-box">
+            <span class="sr-only">Search projects</span>
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="m21 21-4.3-4.3M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <input id="project-search" type="search" placeholder="Search projects">
+          </label>
+          <label class="sort-box">
+            <span class="sr-only">Sort projects</span>
+            <select id="project-sort">
+              <option value="curated">Curated</option>
+              <option value="recent">Recent</option>
+              <option value="name">Name</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="featured-projects" id="featured-projects" data-project-list>
+          <!-- FEATURED_PROJECTS_START -->
+          <article class="project-panel reveal" data-project-card data-featured="true" data-category="Analysis Engines" data-status="Live demo" data-order="1" data-updated="2026-04-28" data-name="Casino Cheat Sheet" data-search="casino cheat sheet casino-cheat-sheet analysis engines static web app live demo a browser-only casino analysis suite built around exact combinatorics and evaluator-backed poker equity tools. combines rule-driven analyzers for roulette, baccarat, craps, blackjack, video poker, three-card poker, and pai gow with poker equity tooling for hold&#39;em, omaha, and seven-card stud. heavy analyzers run in browser workers so the ui stays responsive on github pages. typescript next.js export web workers combinatorics ev solving" style="--project-accent: #f97316">
+            <div class="project-panel__body">
+              <p class="eyebrow">01 / Analysis Engines</p>
+              <h3>Casino Cheat Sheet</h3>
+              <p class="project-headline">A browser-only casino analysis suite built around exact combinatorics and evaluator-backed poker equity tools.</p>
+              <p>Combines rule-driven analyzers for roulette, baccarat, craps, blackjack, video poker, three-card poker, and pai gow with poker equity tooling for Hold&#39;em, Omaha, and seven-card stud. Heavy analyzers run in browser workers so the UI stays responsive on GitHub Pages.</p>
+              <p class="project-why">This is the strongest portfolio signal: static deployment constraints, serious math, multi-page product thinking, and separated engine/frontend architecture.</p>
+              <dl class="project-metrics">
+              <div>
+                <dt>Analyzers</dt>
+                <dd>10</dd>
               </div>
-              <ul class="project-tech-list">
-                <li>Backtracking</li>
-                <li>Constraint Propagation</li>
-                <li>DFS</li>
-                <li>Interactive UI</li>
+              <div>
+                <dt>Runtime</dt>
+                <dd>Static</dd>
+              </div>
+              <div>
+                <dt>Core</dt>
+                <dd>Pure engines</dd>
+              </div>
+              </dl>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li>TypeScript</li>
+                <li>Next.js export</li>
+                <li>Web Workers</li>
+                <li>Combinatorics</li>
+                <li>EV solving</li>
               </ul>
-              <div class="project-links">
-                <a href="https://github.com/MaxwellMetzner/LinkedinSolver" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository: LinkedIn Puzzle Solver">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                  </svg>
+              <div class="project-actions">
+                <a class="project-link project-link--primary" href="https://maxwellmetzner.github.io/Casino-Cheat-Sheet/" target="_blank" rel="noopener noreferrer" aria-label="Open live demo for Casino Cheat Sheet">
+                  <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Demo</span>
                 </a>
-                <a href="https://maxwellmetzner.github.io/LinkedinSolver/" target="_blank" rel="noopener noreferrer" aria-label="Live Website">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="2" y1="12" x2="22" y2="12"></line>
-                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                  </svg>
-                </a>
+                <a class="project-link" href="https://github.com/MaxwellMetzner/Casino-Cheat-Sheet" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub repository for Casino Cheat Sheet">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.1-.3 6-1.5 6-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.6 0C5.8-.1 4.7.2 4.7.2a4.8 4.8 0 0 0-.1 3.5A5.2 5.2 0 0 0 3.2 7.8c0 5.2 3 6.4 6 6.7a4.3 4.3 0 0 0-.8 2.6v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Code</span>
+              </a>
               </div>
             </div>
-            <div class="project-image">
-              <div class="project-image-wrapper">
-                <div class="code-preview puzzle-preview">
-                  <div class="code-header">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                    <span class="filename">Queens Solver</span>
-                  </div>
-                  <div class="puzzle-grid">
-                    <div class="puzzle-cell"></div>
-                    <div class="puzzle-cell queen">♛</div>
-                    <div class="puzzle-cell"></div>
-                    <div class="puzzle-cell"></div>
-                    <div class="puzzle-cell"></div>
-                    <div class="puzzle-cell"></div>
-                    <div class="puzzle-cell"></div>
-                    <div class="puzzle-cell queen">♛</div>
-                    <div class="puzzle-cell queen">♛</div>
-                    <div class="puzzle-cell"></div>
-                    <div class="puzzle-cell"></div>
-                    <div class="puzzle-cell"></div>
-                    <div class="puzzle-cell"></div>
-                    <div class="puzzle-cell"></div>
-                    <div class="puzzle-cell queen">♛</div>
-                    <div class="puzzle-cell"></div>
-                  </div>
+            <div class="project-panel__visual" aria-hidden="true">
+              <div class="preview preview--casino">
+                <div class="preview-header"><span>edge.engine.ts</span><strong>EV</strong></div>
+                <div class="odds-board">
+                  <span>Blackjack</span><b>+0.42</b>
+                  <span>Video poker</span><b>Hold 3</b>
+                  <span>Hold'em</span><b>67%</b>
+                  <span>Craps</span><b>-1.41</b>
+                </div>
+                <div class="worker-line"><i></i><i></i><i></i><span>worker queue</span></div>
+              </div>
+            </div>
+          </article>
+          <article class="project-panel reveal" data-project-card data-featured="true" data-category="Algorithms" data-status="Live demo" data-order="2" data-updated="2026-04-21" data-name="LinkedIn Puzzle Solver" data-search="linkedin puzzle solver linkedinsolver algorithms static web app live demo a collection of browser solvers for linkedin&#39;s daily puzzle games. solves zip, tango, queens, patches, and mini sudoku with puzzle-specific validation, constraint propagation, and pruned backtracking. the interface makes clues, generated cells, and impossible states visible so the solver feels inspectable rather than magical. javascript backtracking constraint propagation dfs static ui" style="--project-accent: #2563eb">
+            <div class="project-panel__body">
+              <p class="eyebrow">02 / Algorithms</p>
+              <h3>LinkedIn Puzzle Solver</h3>
+              <p class="project-headline">A collection of browser solvers for LinkedIn&#39;s daily puzzle games.</p>
+              <p>Solves Zip, Tango, Queens, Patches, and Mini Sudoku with puzzle-specific validation, constraint propagation, and pruned backtracking. The interface makes clues, generated cells, and impossible states visible so the solver feels inspectable rather than magical.</p>
+              <p class="project-why">It makes algorithms tangible, has a clean static deployment story, and shows careful interaction design around complex state.</p>
+              <dl class="project-metrics">
+              <div>
+                <dt>Solvers</dt>
+                <dd>5</dd>
+              </div>
+              <div>
+                <dt>Deploy</dt>
+                <dd>No build</dd>
+              </div>
+              <div>
+                <dt>Mode</dt>
+                <dd>Interactive</dd>
+              </div>
+              </dl>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li>JavaScript</li>
+                <li>Backtracking</li>
+                <li>Constraint propagation</li>
+                <li>DFS</li>
+                <li>Static UI</li>
+              </ul>
+              <div class="project-actions">
+                <a class="project-link project-link--primary" href="https://maxwellmetzner.github.io/LinkedinSolver/" target="_blank" rel="noopener noreferrer" aria-label="Open live demo for LinkedIn Puzzle Solver">
+                  <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Demo</span>
+                </a>
+                <a class="project-link" href="https://github.com/MaxwellMetzner/LinkedinSolver" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub repository for LinkedIn Puzzle Solver">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.1-.3 6-1.5 6-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.6 0C5.8-.1 4.7.2 4.7.2a4.8 4.8 0 0 0-.1 3.5A5.2 5.2 0 0 0 3.2 7.8c0 5.2 3 6.4 6 6.7a4.3 4.3 0 0 0-.8 2.6v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Code</span>
+              </a>
+              </div>
+            </div>
+            <div class="project-panel__visual" aria-hidden="true">
+              <div class="preview preview--puzzle">
+                <div class="preview-header"><span>constraint map</span><strong>SOLVED</strong></div>
+                <div class="puzzle-board">
+                  <span></span><span>Q</span><span></span><span></span><span></span><span></span><span></span><span>Q</span><span></span><span>Q</span><span></span><span></span><span></span><span></span><span>Q</span><span></span><span></span><span></span><span></span><span>Q</span><span></span><span></span><span></span><span></span><span></span>
                 </div>
               </div>
             </div>
           </article>
-
-          <!-- Video Stabbot -->
-          <article class="featured-project reverse reveal">
-            <div class="project-content">
-              <p class="project-overline">Electron • FFmpeg • OpenCV • PyTorch</p>
-              <h3 class="project-title">Video Stabbot</h3>
-              <div class="project-description">
-                <p>
-                  A desktop video stabilization app built with Electron featuring multiple 
-                  stabilization engines — from FFmpeg's vidstab filters to OpenCV feature tracking 
-                  and RAFT deep-learning optical flow. Includes a polished dark UI with drag-and-drop 
-                  input, real-time progress, and fully configurable parameters.
-                </p>
+          <article class="project-panel reveal" data-project-card data-featured="true" data-category="Game Theory" data-status="Live demo" data-order="3" data-updated="2026-03-30" data-name="Farkle Lab" data-search="farkle lab farkle game theory static web app live demo a playable farkle game paired with exact expected-value strategy tools. runs human-vs-cpu games in the browser, highlights legal scoring choices, precomputes expected-value tables for one through six dice, and includes a state advisor for custom score situations. it is part game, part explainable decision engine. javascript expected value game ai probability css" style="--project-accent: #dc2626">
+            <div class="project-panel__body">
+              <p class="eyebrow">03 / Game Theory</p>
+              <h3>Farkle Lab</h3>
+              <p class="project-headline">A playable Farkle game paired with exact expected-value strategy tools.</p>
+              <p>Runs human-vs-CPU games in the browser, highlights legal scoring choices, precomputes expected-value tables for one through six dice, and includes a state advisor for custom score situations. It is part game, part explainable decision engine.</p>
+              <p class="project-why">It turns probability into a product experience and shows applied math without needing a backend.</p>
+              <dl class="project-metrics">
+              <div>
+                <dt>Dice states</dt>
+                <dd>1-6</dd>
               </div>
-              <ul class="project-tech-list">
+              <div>
+                <dt>Mode</dt>
+                <dd>CPU</dd>
+              </div>
+              <div>
+                <dt>Advisor</dt>
+                <dd>Exact EV</dd>
+              </div>
+              </dl>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li>JavaScript</li>
+                <li>Expected value</li>
+                <li>Game AI</li>
+                <li>Probability</li>
+                <li>CSS</li>
+              </ul>
+              <div class="project-actions">
+                <a class="project-link project-link--primary" href="https://maxwellmetzner.github.io/Farkle/" target="_blank" rel="noopener noreferrer" aria-label="Open live demo for Farkle Lab">
+                  <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Demo</span>
+                </a>
+                <a class="project-link" href="https://github.com/MaxwellMetzner/Farkle" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub repository for Farkle Lab">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.1-.3 6-1.5 6-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.6 0C5.8-.1 4.7.2 4.7.2a4.8 4.8 0 0 0-.1 3.5A5.2 5.2 0 0 0 3.2 7.8c0 5.2 3 6.4 6 6.7a4.3 4.3 0 0 0-.8 2.6v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Code</span>
+              </a>
+              </div>
+            </div>
+            <div class="project-panel__visual" aria-hidden="true">
+              <div class="preview preview--dice">
+                <div class="preview-header"><span>turn advisor</span><strong>EV +148</strong></div>
+                <div class="dice-row"><span>1</span><span>5</span><span>5</span><span>2</span><span>6</span><span>1</span></div>
+                <div class="ev-bars"><i style="--h: 78%"></i><i style="--h: 48%"></i><i style="--h: 62%"></i><i style="--h: 34%"></i><i style="--h: 88%"></i></div>
+              </div>
+            </div>
+          </article>
+          <article class="project-panel reveal" data-project-card data-featured="true" data-category="Data Workflow" data-status="Live demo" data-order="4" data-updated="2026-03-20" data-name="Spotify Manager" data-search="spotify manager spotify-manager data workflow static web app live demo a github pages-friendly playlist editor with pkce auth and analysis workflows. handles spotify oauth in the browser, loads playlist metadata, supports sorting, filtering, deduping, custom ordering, outlier detection, transition diagnostics, and playlist export. it treats a static host like a serious application surface. javascript spotify api oauth pkce local storage data tables" style="--project-accent: #16a34a">
+            <div class="project-panel__body">
+              <p class="eyebrow">04 / Data Workflow</p>
+              <h3>Spotify Manager</h3>
+              <p class="project-headline">A GitHub Pages-friendly playlist editor with PKCE auth and analysis workflows.</p>
+              <p>Handles Spotify OAuth in the browser, loads playlist metadata, supports sorting, filtering, deduping, custom ordering, outlier detection, transition diagnostics, and playlist export. It treats a static host like a serious application surface.</p>
+              <p class="project-why">It demonstrates careful static OAuth, data-table UX, and local-first workflow design.</p>
+              <dl class="project-metrics">
+              <div>
+                <dt>Auth</dt>
+                <dd>PKCE</dd>
+              </div>
+              <div>
+                <dt>Host</dt>
+                <dd>Pages</dd>
+              </div>
+              <div>
+                <dt>Workflow</dt>
+                <dd>Playlist ops</dd>
+              </div>
+              </dl>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li>JavaScript</li>
+                <li>Spotify API</li>
+                <li>OAuth PKCE</li>
+                <li>Local storage</li>
+                <li>Data tables</li>
+              </ul>
+              <div class="project-actions">
+                <a class="project-link project-link--primary" href="https://maxwellmetzner.github.io/Spotify-Manager/" target="_blank" rel="noopener noreferrer" aria-label="Open live demo for Spotify Manager">
+                  <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Demo</span>
+                </a>
+                <a class="project-link" href="https://github.com/MaxwellMetzner/Spotify-Manager" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub repository for Spotify Manager">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.1-.3 6-1.5 6-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.6 0C5.8-.1 4.7.2 4.7.2a4.8 4.8 0 0 0-.1 3.5A5.2 5.2 0 0 0 3.2 7.8c0 5.2 3 6.4 6 6.7a4.3 4.3 0 0 0-.8 2.6v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Code</span>
+              </a>
+              </div>
+            </div>
+            <div class="project-panel__visual" aria-hidden="true">
+              <div class="preview preview--playlist">
+                <div class="preview-header"><span>mix assist</span><strong>PKCE</strong></div>
+                <div class="track-list">
+                  <span><b></b>Energy 0.82</span>
+                  <span><b></b>Tempo 124</span>
+                  <span><b></b>Valence 0.68</span>
+                  <span><b></b>Outlier low</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="project-panel reveal" data-project-card data-featured="true" data-category="Media Tools" data-status="Source" data-order="5" data-updated="2026-03-01" data-name="Video Stabbot" data-search="video stabbot video-stabbot media tools desktop app source a professional video stabilization desktop app with multiple motion-analysis engines. combines electron, ffmpeg vidstab, opencv feature tracking, and raft optical flow behind a polished ui with dependency detection, progress reporting, drag-and-drop input, gpu encoder detection, and configurable stabilization parameters. electron ffmpeg opencv pytorch raft" style="--project-accent: #0891b2">
+            <div class="project-panel__body">
+              <p class="eyebrow">05 / Media Tools</p>
+              <h3>Video Stabbot</h3>
+              <p class="project-headline">A professional video stabilization desktop app with multiple motion-analysis engines.</p>
+              <p>Combines Electron, FFmpeg vidstab, OpenCV feature tracking, and RAFT optical flow behind a polished UI with dependency detection, progress reporting, drag-and-drop input, GPU encoder detection, and configurable stabilization parameters.</p>
+              <p class="project-why">It is visually interesting and technically ambitious across desktop, media processing, Python integration, and AI-assisted motion analysis.</p>
+              <dl class="project-metrics">
+              <div>
+                <dt>Modes</dt>
+                <dd>4</dd>
+              </div>
+              <div>
+                <dt>GPU</dt>
+                <dd>Auto</dd>
+              </div>
+              <div>
+                <dt>Flow</dt>
+                <dd>RAFT</dd>
+              </div>
+              </dl>
+              <ul class="tag-list" aria-label="Technologies used">
                 <li>Electron</li>
                 <li>FFmpeg</li>
                 <li>OpenCV</li>
-                <li>RAFT / PyTorch</li>
+                <li>PyTorch</li>
+                <li>RAFT</li>
               </ul>
-              <div class="project-links">
-                <a href="https://github.com/MaxwellMetzner/Video-Stabbot" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository: Video Stabbot">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                  </svg>
-                </a>
+              <div class="project-actions">
+                <a class="project-link" href="https://github.com/MaxwellMetzner/Video-Stabbot" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub repository for Video Stabbot">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.1-.3 6-1.5 6-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.6 0C5.8-.1 4.7.2 4.7.2a4.8 4.8 0 0 0-.1 3.5A5.2 5.2 0 0 0 3.2 7.8c0 5.2 3 6.4 6 6.7a4.3 4.3 0 0 0-.8 2.6v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Code</span>
+              </a>
               </div>
             </div>
-            <div class="project-image">
-              <div class="project-image-wrapper">
-                <div class="code-preview stabbot-preview">
-                  <div class="code-header">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                    <span class="filename">Video Stabbot</span>
-                  </div>
-                  <!-- App header bar -->
-                  <div class="stabbot-app">
-                    <div class="stabbot-header">
-                      <div class="stabbot-logo">
-                        <span class="stabbot-logo-icon">&#127916;</span>
-                        <span class="stabbot-logo-text">Video Stabbot</span>
-                      </div>
-                      <div class="stabbot-badge">
-                        <span class="stabbot-badge-dot"></span>
-                        NVENC
-                      </div>
-                    </div>
-                    <!-- File info -->
-                    <div class="stabbot-file-info">
-                      <div class="stabbot-file-name">vacation_clip.mp4</div>
-                      <div class="stabbot-file-meta">1920×1080 · 30fps · 2m 14s</div>
-                    </div>
-                    <!-- Quality cards -->
-                    <div class="stabbot-quality-grid">
-                      <div class="stabbot-card stabbot-card-hq">
-                        <span class="stabbot-card-icon">&#10024;</span>
-                        <span class="stabbot-card-label">High Quality</span>
-                      </div>
-                      <div class="stabbot-card stabbot-card-custom">
-                        <span class="stabbot-card-icon">&#9881;</span>
-                        <span class="stabbot-card-label">Custom</span>
-                      </div>
-                    </div>
-                    <!-- Divider -->
-                    <div class="stabbot-divider"><span>Advanced Modes</span></div>
-                    <!-- Advanced cards -->
-                    <div class="stabbot-advanced-grid">
-                      <div class="stabbot-card stabbot-card-opencv">
-                        <span class="stabbot-card-icon">&#127919;</span>
-                        <span class="stabbot-card-label">OpenCV</span>
-                      </div>
-                      <div class="stabbot-card stabbot-card-raft">
-                        <span class="stabbot-card-icon">&#129302;</span>
-                        <span class="stabbot-card-label">RAFT AI</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div class="project-panel__visual" aria-hidden="true">
+              <div class="preview preview--video">
+                <div class="preview-header"><span>motion field</span><strong>RAFT</strong></div>
+                <div class="frame-stack"><i></i><i></i><i></i></div>
+                <div class="motion-lines"><span></span><span></span><span></span><span></span></div>
               </div>
             </div>
           </article>
-
-          <!-- Amazon Bestseller Extractor -->
-          <article class="featured-project reveal">
-            <div class="project-content">
-              <p class="project-overline">Chrome Extension • JavaScript</p>
-              <h3 class="project-title">Amazon BSR Extractor</h3>
-              <div class="project-description">
-                <p>
-                  A Chrome extension that extracts Best Sellers Rank (BSR) categories and links 
-                  from Amazon product pages. Perfect for product research and competitive analysis, 
-                  it helps gauge demand and explore neighboring product niches without any external 
-                  data transmission.
-                </p>
+          <article class="project-panel reveal" data-project-card data-featured="true" data-category="Planning Systems" data-status="Source" data-order="6" data-updated="2026-03-31" data-name="Trip Planner" data-search="trip planner trip-planner planning systems static web app source a route-aware itinerary planner that ranks stops against the trip timeline. plans meal, coffee, rest, scenic, hike, attraction, gas, ev charging, and surprise stops using slot fit, detour cost, daylight, open-hours, review quality, and preference fit. it keeps a demo mode fully client-side while allowing google maps enhancement. typescript react vite routing local storage" style="--project-accent: #0f766e">
+            <div class="project-panel__body">
+              <p class="eyebrow">06 / Planning Systems</p>
+              <h3>Trip Planner</h3>
+              <p class="project-headline">A route-aware itinerary planner that ranks stops against the trip timeline.</p>
+              <p>Plans meal, coffee, rest, scenic, hike, attraction, gas, EV charging, and surprise stops using slot fit, detour cost, daylight, open-hours, review quality, and preference fit. It keeps a demo mode fully client-side while allowing Google Maps enhancement.</p>
+              <p class="project-why">It shows product architecture under static hosting constraints and exposes ranking decisions rather than hiding them.</p>
+              <dl class="project-metrics">
+              <div>
+                <dt>Modes</dt>
+                <dd>Demo/API</dd>
               </div>
-              <ul class="project-tech-list">
-                <li>Chrome APIs</li>
-                <li>JavaScript</li>
-                <li>Content Scripts</li>
-                <li>DOM Parsing</li>
+              <div>
+                <dt>Ranking</dt>
+                <dd>Weighted</dd>
+              </div>
+              <div>
+                <dt>Host</dt>
+                <dd>Static</dd>
+              </div>
+              </dl>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li>TypeScript</li>
+                <li>React</li>
+                <li>Vite</li>
+                <li>Routing</li>
+                <li>Local storage</li>
               </ul>
-              <div class="project-links">
-                <a href="https://github.com/MaxwellMetzner/Amazon-Bestseller-Extractor" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository: Amazon BSR Extractor">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                  </svg>
-                </a>
+              <div class="project-actions">
+                <a class="project-link" href="https://github.com/MaxwellMetzner/Trip-Planner" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub repository for Trip Planner">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.1-.3 6-1.5 6-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.6 0C5.8-.1 4.7.2 4.7.2a4.8 4.8 0 0 0-.1 3.5A5.2 5.2 0 0 0 3.2 7.8c0 5.2 3 6.4 6 6.7a4.3 4.3 0 0 0-.8 2.6v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Code</span>
+              </a>
               </div>
             </div>
-            <div class="project-image">
-              <div class="project-image-wrapper">
-                <div class="code-preview extension-preview">
-                  <div class="code-header">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                    <span class="filename">BSR Extractor</span>
-                  </div>
-                  <div class="extension-demo">
-                    <div class="bsr-item">
-                      <span class="bsr-rank">#142</span>
-                      <span class="bsr-category">Electronics</span>
-                    </div>
-                    <div class="bsr-item">
-                      <span class="bsr-rank">#8</span>
-                      <span class="bsr-category">Computer Accessories</span>
-                    </div>
-                    <div class="camel-link">View Price History on CamelCamelCamel</div>
-                  </div>
-                </div>
+            <div class="project-panel__visual" aria-hidden="true">
+              <div class="preview preview--route">
+                <div class="preview-header"><span>route scorer</span><strong>STATIC</strong></div>
+                <div class="route-line"><i></i><i></i><i></i><i></i></div>
+                <div class="route-stops"><span>Coffee</span><span>Lunch</span><span>Scenic</span></div>
               </div>
             </div>
           </article>
+<!-- FEATURED_PROJECTS_END -->
         </div>
 
-        <!-- Other Projects -->
-        <div class="other-projects">
-          <h3 class="other-projects-title">Other Noteworthy Projects</h3>
-          <p class="other-projects-subtitle">Academic projects from Stevens Institute of Technology</p>
-          <button class="toggle-projects-btn" id="toggle-school-projects">
-            <span>Show School Projects</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-          
-          <div class="school-projects-grid" id="school-projects-grid">
-            <article class="project-card">
-              <div class="card-header">
-                <div class="folder-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-                  </svg>
-                </div>
-                <div class="card-links">
-                  <a href="https://github.com/MaxMetz4/School-Projects/tree/main/Algorithms%20CS%20385%20(C%2B%2B)" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <h4 class="card-title">Algorithms</h4>
-              <p class="card-description">Data structures, Dijkstra's algorithm, Newton's method, and more.</p>
-              <ul class="card-tech">
-                <li>C++</li>
-              </ul>
-            </article>
-
-            <article class="project-card">
-              <div class="card-header">
-                <div class="folder-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-                  </svg>
-                </div>
-                <div class="card-links">
-                  <a href="https://github.com/MaxwellMetzner/School-Projects/tree/main/Data%20Structures%20CS%20284%20(Java)" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <h4 class="card-title">Data Structures</h4>
-              <p class="card-description">ADTs, generics, tree structures, sorting complexity.</p>
-              <ul class="card-tech">
-                <li>Java</li>
-              </ul>
-            </article>
-
-            <article class="project-card">
-              <div class="card-header">
-                <div class="folder-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-                  </svg>
-                </div>
-                <div class="card-links">
-                  <a href="https://github.com/MaxwellMetzner/School-Projects/tree/main/Systems%20Programming%20CS%20392%20(C)" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <h4 class="card-title">Systems Programming</h4>
-              <p class="card-description">Shells, sockets, threads, file systems, low-level memory management.</p>
-              <ul class="card-tech">
-                <li>C</li>
-              </ul>
-            </article>
-
-            <article class="project-card">
-              <div class="card-header">
-                <div class="folder-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-                  </svg>
-                </div>
-                <div class="card-links">
-                  <a href="https://github.com/MaxwellMetzner/School-Projects/tree/main/Programming%20Language%20CS%20496%20(Ocaml)" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <h4 class="card-title">Programming Languages</h4>
-              <p class="card-description">Functional programming, interpreters, type systems.</p>
-              <ul class="card-tech">
-                <li>OCaml</li>
-              </ul>
-            </article>
-
-            <article class="project-card">
-              <div class="card-header">
-                <div class="folder-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-                  </svg>
-                </div>
-                <div class="card-links">
-                  <a href="https://github.com/MaxwellMetzner/School-Projects/tree/main/Quantitative%20Biology%20(Python)" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <h4 class="card-title">Quantitative Biology</h4>
-              <p class="card-description">Evolutionary algorithms for kinematic motion optimization.</p>
-              <ul class="card-tech">
-                <li>Python</li>
-              </ul>
-            </article>
-
-            <article class="project-card">
-              <div class="card-header">
-                <div class="folder-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-                  </svg>
-                </div>
-                <div class="card-links">
-                  <a href="https://github.com/MaxwellMetzner/School-Projects/tree/main/Discrete%20Structures%20CS%20135%20(Scheme%20dialect%20of%20Lisp)" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <h4 class="card-title">Discrete Structures</h4>
-              <p class="card-description">Functional programming, Peano arithmetic, RSA encryption, logical proofs.</p>
-              <ul class="card-tech">
-                <li>Scheme</li>
-              </ul>
-            </article>
+        <div class="project-index-wrap">
+          <div class="section-heading section-heading--compact">
+            <p class="eyebrow">Project index</p>
+            <h2>Smaller tools, extensions, and experiments.</h2>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section about-section">
-      <div class="container">
-        <h2 class="section-title">
-          <span class="title-number">02.</span>
-          About Me
-        </h2>
-        
-        <div class="about-content">
-          <div class="about-text reveal">
-            <p>
-              Hello! I'm Maxwell, a software developer based in the New York area. I enjoy creating 
-              things that live on the internet, whether that's websites, applications, or anything in between.
-            </p>
-            <p>
-              I graduated from <strong>Stevens Institute of Technology</strong> with a degree in Computer Science, 
-              and I currently work at <strong>Fiserv</strong>, a Fortune 500 fintech company, where I build 
-              enterprise banking solutions. My day-to-day involves working with C#, .NET, WPF, and SQL Server 
-              to develop and maintain bank teller applications.
-            </p>
-            <p>
-              Outside of work, I love building personal projects that solve real problems—from video 
-              stabilization tools to browser extensions that help with product research. I'm always 
-              looking to learn new technologies and tackle interesting challenges.
-            </p>
-            <p>Here are some technologies I've been working with recently:</p>
-            
-            <ul class="skills-list">
-              <li>C# / .NET</li>
+          <div class="project-index" id="project-index" data-project-list>
+          <!-- PROJECT_INDEX_START -->
+          <article class="project-card reveal" data-project-card data-featured="false" data-category="Developer Tools" data-status="Source" data-order="7" data-updated="2026-04-01" data-name="Regex Isolator" data-search="regex isolator regex-isolator developer tools desktop app source a zero-dependency regex workbench for testing patterns against large text. uses python&#39;s standard library to provide live or manual matching, highlighting, click-to-jump results, flags, presets, file i/o, and a cache/unload mode for huge inputs. python tkinter regex desktop ui" style="--project-accent: #7c3aed">
+            <div class="project-card__top">
+              <p class="eyebrow">Developer Tools</p>
+              <span>Source</span>
+            </div>
+            <h3>Regex Isolator</h3>
+            <p>A zero-dependency regex workbench for testing patterns against large text.</p>
+            <div class="project-card__meta">
+              <span>Desktop app</span>
+              <span>Apr 2026</span>
+            </div>
+            <ul class="tag-list" aria-label="Technologies used">
               <li>Python</li>
-              <li>JavaScript</li>
-              <li>WPF / WinForms</li>
-              <li>SQL Server</li>
-              <li>Chrome Extensions</li>
+              <li>Tkinter</li>
+              <li>Regex</li>
+              <li>Desktop UI</li>
             </ul>
-          </div>
-          
-          <div class="about-image reveal">
-            <div class="image-wrapper">
-              <img src="assets/images/selfie.png" alt="Maxwell Metzner" width="300" height="300" loading="lazy" decoding="async">
-              <div class="image-border"></div>
+            <div class="project-actions project-actions--compact">
+              <a class="project-link" href="https://github.com/MaxwellMetzner/Regex-Isolator" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub repository for Regex Isolator">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.1-.3 6-1.5 6-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.6 0C5.8-.1 4.7.2 4.7.2a4.8 4.8 0 0 0-.1 3.5A5.2 5.2 0 0 0 3.2 7.8c0 5.2 3 6.4 6 6.7a4.3 4.3 0 0 0-.8 2.6v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Code</span>
+              </a>
             </div>
-            <div class="image-wrapper">
-              <img src="assets/images/volleyball.jpg" alt="Maxwell Metzner playing volleyball" width="300" height="272" loading="lazy" decoding="async">
-              <div class="image-border"></div>
+          </article>
+          <article class="project-card reveal" data-project-card data-featured="false" data-category="Browser Extensions" data-status="Source" data-order="8" data-updated="2026-04-01" data-name="Tab Volume Adjuster" data-search="tab volume adjuster volume-adjuster browser extensions chrome extension source a focused manifest v3 extension for per-site tab volume and mono audio. captures tab audio through an offscreen document, persists settings by hostname, lists audible tabs, and provides settings for volume step size, max volume, persistence, and popup behavior. typescript manifest v3 web audio chrome apis" style="--project-accent: #06b6d4">
+            <div class="project-card__top">
+              <p class="eyebrow">Browser Extensions</p>
+              <span>Source</span>
             </div>
-          </div>
-        </div>
-
-        <!-- Interests -->
-        <div class="interests reveal">
-          <h3>When I'm Not Coding</h3>
-          <div class="interests-grid">
-            <div class="interest-item">
-              <span class="interest-icon">🏐</span>
-              <span class="interest-text">Volleyball</span>
+            <h3>Tab Volume Adjuster</h3>
+            <p>A focused Manifest V3 extension for per-site tab volume and mono audio.</p>
+            <div class="project-card__meta">
+              <span>Chrome extension</span>
+              <span>Apr 2026</span>
             </div>
-            <div class="interest-item">
-              <span class="interest-icon">⛳</span>
-              <span class="interest-text">Golf</span>
+            <ul class="tag-list" aria-label="Technologies used">
+              <li>TypeScript</li>
+              <li>Manifest V3</li>
+              <li>Web Audio</li>
+              <li>Chrome APIs</li>
+            </ul>
+            <div class="project-actions project-actions--compact">
+              <a class="project-link" href="https://github.com/MaxwellMetzner/Volume-Adjuster" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub repository for Tab Volume Adjuster">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.1-.3 6-1.5 6-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.6 0C5.8-.1 4.7.2 4.7.2a4.8 4.8 0 0 0-.1 3.5A5.2 5.2 0 0 0 3.2 7.8c0 5.2 3 6.4 6 6.7a4.3 4.3 0 0 0-.8 2.6v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Code</span>
+              </a>
             </div>
-            <div class="interest-item">
-              <span class="interest-icon">🎮</span>
-              <span class="interest-text">Gaming</span>
+          </article>
+          <article class="project-card reveal" data-project-card data-featured="false" data-category="Browser Extensions" data-status="Source" data-order="9" data-updated="2026-03-31" data-name="Chess.com Lichess Link" data-search="chess.com lichess link chess.com-lichess-link browser extensions chrome extension source a one-click pgn bridge from chess.com games to lichess imports. detects supported chess.com pages, waits for pgn readiness, opens lichess import with a url-hash token, and fills the import form in-page without clipboard access or api tokens. typescript manifest v3 content scripts pgn" style="--project-accent: #65a30d">
+            <div class="project-card__top">
+              <p class="eyebrow">Browser Extensions</p>
+              <span>Source</span>
             </div>
-            <div class="interest-item">
-              <span class="interest-icon">📰</span>
-              <span class="interest-text">Tech News</span>
+            <h3>Chess.com Lichess Link</h3>
+            <p>A one-click PGN bridge from Chess.com games to Lichess imports.</p>
+            <div class="project-card__meta">
+              <span>Chrome extension</span>
+              <span>Mar 2026</span>
             </div>
+            <ul class="tag-list" aria-label="Technologies used">
+              <li>TypeScript</li>
+              <li>Manifest V3</li>
+              <li>Content scripts</li>
+              <li>PGN</li>
+            </ul>
+            <div class="project-actions project-actions--compact">
+              <a class="project-link" href="https://github.com/MaxwellMetzner/Chess.com-Lichess-Link" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub repository for Chess.com Lichess Link">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.1-.3 6-1.5 6-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.6 0C5.8-.1 4.7.2 4.7.2a4.8 4.8 0 0 0-.1 3.5A5.2 5.2 0 0 0 3.2 7.8c0 5.2 3 6.4 6 6.7a4.3 4.3 0 0 0-.8 2.6v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Code</span>
+              </a>
+            </div>
+          </article>
+          <article class="project-card reveal" data-project-card data-featured="false" data-category="Browser Extensions" data-status="Source" data-order="10" data-updated="2026-03-31" data-name="Amazon Bestseller Extractor" data-search="amazon bestseller extractor amazon-bestseller-extractor browser extensions chrome extension source a scoped extension for extracting amazon best sellers rank data from product pages. reads bsr categories from supported storefronts, displays the strongest rank as a toolbar badge, lists category links in a compact popup, and avoids broad host permissions. javascript typescript manifest v3 dom parsing" style="--project-accent: #f59e0b">
+            <div class="project-card__top">
+              <p class="eyebrow">Browser Extensions</p>
+              <span>Source</span>
+            </div>
+            <h3>Amazon Bestseller Extractor</h3>
+            <p>A scoped extension for extracting Amazon Best Sellers Rank data from product pages.</p>
+            <div class="project-card__meta">
+              <span>Chrome extension</span>
+              <span>Mar 2026</span>
+            </div>
+            <ul class="tag-list" aria-label="Technologies used">
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>Manifest V3</li>
+              <li>DOM parsing</li>
+            </ul>
+            <div class="project-actions project-actions--compact">
+              <a class="project-link" href="https://github.com/MaxwellMetzner/Amazon-Bestseller-Extractor" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub repository for Amazon Bestseller Extractor">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.1-.3 6-1.5 6-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.6 0C5.8-.1 4.7.2 4.7.2a4.8 4.8 0 0 0-.1 3.5A5.2 5.2 0 0 0 3.2 7.8c0 5.2 3 6.4 6 6.7a4.3 4.3 0 0 0-.8 2.6v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Code</span>
+              </a>
+            </div>
+          </article>
+          <article class="project-card reveal" data-project-card data-featured="false" data-category="Browser Extensions" data-status="Source" data-order="11" data-updated="2026-03-30" data-name="Instagram Saver" data-search="instagram saver instagram-saver browser extensions chrome extension source a media downloader for instagram pages available in the user&#39;s browser session. supports posts, reels, stories, highlights, profile batches, metadata sidecars, batch reports, folder templates, pacing controls, and checkpointed full-profile crawls. javascript chrome apis downloads local storage" style="--project-accent: #db2777">
+            <div class="project-card__top">
+              <p class="eyebrow">Browser Extensions</p>
+              <span>Source</span>
+            </div>
+            <h3>Instagram Saver</h3>
+            <p>A media downloader for Instagram pages available in the user&#39;s browser session.</p>
+            <div class="project-card__meta">
+              <span>Chrome extension</span>
+              <span>Mar 2026</span>
+            </div>
+            <ul class="tag-list" aria-label="Technologies used">
+              <li>JavaScript</li>
+              <li>Chrome APIs</li>
+              <li>Downloads</li>
+              <li>Local storage</li>
+            </ul>
+            <div class="project-actions project-actions--compact">
+              <a class="project-link" href="https://github.com/MaxwellMetzner/Instagram-Saver" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub repository for Instagram Saver">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.1-.3 6-1.5 6-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.6 0C5.8-.1 4.7.2 4.7.2a4.8 4.8 0 0 0-.1 3.5A5.2 5.2 0 0 0 3.2 7.8c0 5.2 3 6.4 6 6.7a4.3 4.3 0 0 0-.8 2.6v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Code</span>
+              </a>
+            </div>
+          </article>
+          <article class="project-card reveal" data-project-card data-featured="false" data-category="Sync Systems" data-status="Source" data-order="12" data-updated="2026-03-20" data-name="Steam OneNote Sync" data-search="steam onenote sync steam-onenote-sync sync systems cli app source a bidirectional sync bridge between local steam game notes and microsoft onenote. normalizes both systems into a canonical note model, previews push/pull/sync writes, tracks onenote pages with sidecar state, and projects rich onenote content back to steam&#39;s safer subset. python microsoft graph device code auth sync engine" style="--project-accent: #7c3aed">
+            <div class="project-card__top">
+              <p class="eyebrow">Sync Systems</p>
+              <span>Source</span>
+            </div>
+            <h3>Steam OneNote Sync</h3>
+            <p>A bidirectional sync bridge between local Steam game notes and Microsoft OneNote.</p>
+            <div class="project-card__meta">
+              <span>CLI app</span>
+              <span>Mar 2026</span>
+            </div>
+            <ul class="tag-list" aria-label="Technologies used">
+              <li>Python</li>
+              <li>Microsoft Graph</li>
+              <li>Device code auth</li>
+              <li>Sync engine</li>
+            </ul>
+            <div class="project-actions project-actions--compact">
+              <a class="project-link" href="https://github.com/MaxwellMetzner/Steam-OneNote-Sync" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub repository for Steam OneNote Sync">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.1-.3 6-1.5 6-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.6 0C5.8-.1 4.7.2 4.7.2a4.8 4.8 0 0 0-.1 3.5A5.2 5.2 0 0 0 3.2 7.8c0 5.2 3 6.4 6 6.7a4.3 4.3 0 0 0-.8 2.6v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Code</span>
+              </a>
+            </div>
+          </article>
+          <article class="project-card reveal" data-project-card data-featured="false" data-category="Windows Tools" data-status="Source" data-order="13" data-updated="2026-03-14" data-name="PATH Manager" data-search="path manager path-manager windows tools desktop app source a safer windows path editor with diagnostics, backups, and diff previews. turns path editing into a reorderable ui with user/system scopes, missing-path cleanup, duplicate detection, command shadowing, risk warnings, backup snapshots, and admin-aware saving. python tkinter windows registry ux" style="--project-accent: #475569">
+            <div class="project-card__top">
+              <p class="eyebrow">Windows Tools</p>
+              <span>Source</span>
+            </div>
+            <h3>PATH Manager</h3>
+            <p>A safer Windows PATH editor with diagnostics, backups, and diff previews.</p>
+            <div class="project-card__meta">
+              <span>Desktop app</span>
+              <span>Mar 2026</span>
+            </div>
+            <ul class="tag-list" aria-label="Technologies used">
+              <li>Python</li>
+              <li>Tkinter</li>
+              <li>Windows Registry</li>
+              <li>UX</li>
+            </ul>
+            <div class="project-actions project-actions--compact">
+              <a class="project-link" href="https://github.com/MaxwellMetzner/PATH-Manager" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub repository for PATH Manager">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.1-.3 6-1.5 6-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.6 0C5.8-.1 4.7.2 4.7.2a4.8 4.8 0 0 0-.1 3.5A5.2 5.2 0 0 0 3.2 7.8c0 5.2 3 6.4 6 6.7a4.3 4.3 0 0 0-.8 2.6v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Code</span>
+              </a>
+            </div>
+          </article>
+          <article class="project-card reveal" data-project-card data-featured="false" data-category="Game Tools" data-status="Source" data-order="14" data-updated="2026-03-29" data-name="Lossless Scaling Wrapper" data-search="lossless scaling wrapper lossless-scaling-wrapper game tools windows launcher source a windows launcher that starts lossless scaling, launches a game, and restores focus. designed for steam launch options, the wrapper finds lossless scaling, starts the target game command, minimizes the scaling window, foregrounds the game, and returns the game&#39;s exit code. c# .net 8 windows apis steam" style="--project-accent: #0284c7">
+            <div class="project-card__top">
+              <p class="eyebrow">Game Tools</p>
+              <span>Source</span>
+            </div>
+            <h3>Lossless Scaling Wrapper</h3>
+            <p>A Windows launcher that starts Lossless Scaling, launches a game, and restores focus.</p>
+            <div class="project-card__meta">
+              <span>Windows launcher</span>
+              <span>Mar 2026</span>
+            </div>
+            <ul class="tag-list" aria-label="Technologies used">
+              <li>C#</li>
+              <li>.NET 8</li>
+              <li>Windows APIs</li>
+              <li>Steam</li>
+            </ul>
+            <div class="project-actions project-actions--compact">
+              <a class="project-link" href="https://github.com/MaxwellMetzner/Lossless-Scaling-Wrapper" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub repository for Lossless Scaling Wrapper">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.1-.3 6-1.5 6-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.6 0C5.8-.1 4.7.2 4.7.2a4.8 4.8 0 0 0-.1 3.5A5.2 5.2 0 0 0 3.2 7.8c0 5.2 3 6.4 6 6.7a4.3 4.3 0 0 0-.8 2.6v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Code</span>
+              </a>
+            </div>
+          </article>
+          <article class="project-card reveal" data-project-card data-featured="false" data-category="Security Tools" data-status="Source" data-order="15" data-updated="2026-03-25" data-name="Chrome Extension Code Viewer" data-search="chrome extension code viewer chrome-extension-code-viewer security tools local web tool source a local extension explorer with permission risk scoring and entry-point maps. scans installed chrome extensions, resolves localized manifest names, maps popup/background/content-script entry points, scores risky permissions, and can enrich entries with store metadata. powershell localhost ui manifest parsing risk scoring" style="--project-accent: #334155">
+            <div class="project-card__top">
+              <p class="eyebrow">Security Tools</p>
+              <span>Source</span>
+            </div>
+            <h3>Chrome Extension Code Viewer</h3>
+            <p>A local extension explorer with permission risk scoring and entry-point maps.</p>
+            <div class="project-card__meta">
+              <span>Local web tool</span>
+              <span>Mar 2026</span>
+            </div>
+            <ul class="tag-list" aria-label="Technologies used">
+              <li>PowerShell</li>
+              <li>Localhost UI</li>
+              <li>Manifest parsing</li>
+              <li>Risk scoring</li>
+            </ul>
+            <div class="project-actions project-actions--compact">
+              <a class="project-link" href="https://github.com/MaxwellMetzner/Chrome-Extension-Code-Viewer" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub repository for Chrome Extension Code Viewer">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.1-.3 6-1.5 6-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.6 0C5.8-.1 4.7.2 4.7.2a4.8 4.8 0 0 0-.1 3.5A5.2 5.2 0 0 0 3.2 7.8c0 5.2 3 6.4 6 6.7a4.3 4.3 0 0 0-.8 2.6v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Code</span>
+              </a>
+            </div>
+          </article>
+          <article class="project-card reveal" data-project-card data-featured="false" data-category="Windows Tools" data-status="Source" data-order="16" data-updated="2026-03-28" data-name="Autoclicker" data-search="autoclicker autoclicker windows tools desktop app source a compact always-on-top autoclicker built only with python standard libraries. supports left, right, and middle clicks, configurable intervals, global hotkeys, a custom dark title bar, and a screen-corner fail-safe. python tkinter ctypes hotkeys" style="--project-accent: #f43f5e">
+            <div class="project-card__top">
+              <p class="eyebrow">Windows Tools</p>
+              <span>Source</span>
+            </div>
+            <h3>Autoclicker</h3>
+            <p>A compact always-on-top autoclicker built only with Python standard libraries.</p>
+            <div class="project-card__meta">
+              <span>Desktop app</span>
+              <span>Mar 2026</span>
+            </div>
+            <ul class="tag-list" aria-label="Technologies used">
+              <li>Python</li>
+              <li>Tkinter</li>
+              <li>ctypes</li>
+              <li>Hotkeys</li>
+            </ul>
+            <div class="project-actions project-actions--compact">
+              <a class="project-link" href="https://github.com/MaxwellMetzner/Autoclicker" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub repository for Autoclicker">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.1-.3 6-1.5 6-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.6 0C5.8-.1 4.7.2 4.7.2a4.8 4.8 0 0 0-.1 3.5A5.2 5.2 0 0 0 3.2 7.8c0 5.2 3 6.4 6 6.7a4.3 4.3 0 0 0-.8 2.6v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Code</span>
+              </a>
+            </div>
+          </article>
+          <article class="project-card reveal" data-project-card data-featured="false" data-category="Games" data-status="Source" data-order="17" data-updated="2026-03-14" data-name="2048 Game" data-search="2048 game 2048-game games desktop game source a python implementation of the 2048 tile-merging game. a compact game project focused on grid state, tile movement, merge rules, and responsive input handling. python pygame game state puzzle game" style="--project-accent: #ea580c">
+            <div class="project-card__top">
+              <p class="eyebrow">Games</p>
+              <span>Source</span>
+            </div>
+            <h3>2048 Game</h3>
+            <p>A Python implementation of the 2048 tile-merging game.</p>
+            <div class="project-card__meta">
+              <span>Desktop game</span>
+              <span>Mar 2026</span>
+            </div>
+            <ul class="tag-list" aria-label="Technologies used">
+              <li>Python</li>
+              <li>Pygame</li>
+              <li>Game state</li>
+              <li>Puzzle game</li>
+            </ul>
+            <div class="project-actions project-actions--compact">
+              <a class="project-link" href="https://github.com/MaxwellMetzner/2048-Game" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub repository for 2048 Game">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.1-.3 6-1.5 6-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.6 0C5.8-.1 4.7.2 4.7.2a4.8 4.8 0 0 0-.1 3.5A5.2 5.2 0 0 0 3.2 7.8c0 5.2 3 6.4 6 6.7a4.3 4.3 0 0 0-.8 2.6v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Code</span>
+              </a>
+            </div>
+          </article>
+          <article class="project-card reveal" data-project-card data-featured="false" data-category="Profile" data-status="Source" data-order="18" data-updated="2026-03-30" data-name="GitHub Profile Config" data-search="github profile config maxwellmetzner profile repository config source the profile readme and github profile configuration repository. a supporting repository for keeping the public github profile consistent with the portfolio narrative and current technical focus. markdown github profile documentation" style="--project-accent: #64748b">
+            <div class="project-card__top">
+              <p class="eyebrow">Profile</p>
+              <span>Source</span>
+            </div>
+            <h3>GitHub Profile Config</h3>
+            <p>The profile README and GitHub profile configuration repository.</p>
+            <div class="project-card__meta">
+              <span>Repository config</span>
+              <span>Mar 2026</span>
+            </div>
+            <ul class="tag-list" aria-label="Technologies used">
+              <li>Markdown</li>
+              <li>GitHub Profile</li>
+              <li>Documentation</li>
+            </ul>
+            <div class="project-actions project-actions--compact">
+              <a class="project-link" href="https://github.com/MaxwellMetzner/MaxwellMetzner" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub repository for GitHub Profile Config">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.1-.3 6-1.5 6-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.6 0C5.8-.1 4.7.2 4.7.2a4.8 4.8 0 0 0-.1 3.5A5.2 5.2 0 0 0 3.2 7.8c0 5.2 3 6.4 6 6.7a4.3 4.3 0 0 0-.8 2.6v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Code</span>
+              </a>
+            </div>
+          </article>
+<!-- PROJECT_INDEX_END -->
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-      <div class="container">
-        <h2 class="section-title">
-          <span class="title-number">03.</span>
-          Get In Touch
-        </h2>
-        
-        <div class="contact-content reveal">
-          <p class="contact-text">
-            I'm currently open to new opportunities and my inbox is always open. 
-            Whether you have a question, want to collaborate on a project, or just want to say hi, 
-            I'll try my best to get back to you!
-          </p>
-          
-          <div class="email-container">
-            <span class="email-address" id="email-address">maxwell.metzner@gmail.com</span>
-            <button class="btn btn-outline copy-btn" id="copy-email" aria-label="Copy email to clipboard">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-              </svg>
-              <span class="copy-text">Copy</span>
-            </button>
+    <section class="system section-band" id="system">
+      <div class="container system-grid">
+        <div class="section-heading">
+          <p class="eyebrow">Site architecture</p>
+          <h2>Static runtime, data-driven maintenance, progressive enhancement.</h2>
+          <p>The page is committed as semantic HTML for indexing and no-JS access. Project content is generated from JSON so adding, removing, and reordering work stays boring in the best possible way.</p>
+        </div>
+
+        <div class="architecture-list" aria-label="Architecture highlights">
+          <article>
+            <h3>Canonical project data</h3>
+            <p><code>assets/data/projects.json</code> owns project order, metadata, links, featured status, and preview type.</p>
+          </article>
+          <article>
+            <h3>Generated static markup</h3>
+            <p><code>npm run build:projects</code> writes SEO-friendly project HTML and JSON-LD into <code>index.html</code>.</p>
+          </article>
+          <article>
+            <h3>Small enhancement layer</h3>
+            <p>Vanilla JavaScript adds filtering, sorting, reveal animation, theme persistence, and a reduced-motion-aware canvas field.</p>
+          </article>
+          <article>
+            <h3>Performance first</h3>
+            <p>No framework payload, no external fonts, lazy media below the fold, CSS containment, and static assets suitable for GitHub Pages.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section-band" id="about">
+      <div class="container about-grid">
+        <div class="about-media">
+          <picture>
+            <source srcset="assets/images/volleyball.webp" type="image/webp">
+            <img src="assets/images/volleyball.jpg" alt="Maxwell Metzner playing volleyball" width="360" height="327" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow">About</p>
+          <h2>Engineer at Fiserv, builder after hours.</h2>
+          <p>I am a software engineer based in New Jersey with a Computer Science degree from Stevens Institute of Technology. Professionally, I work on enterprise banking software with C#, .NET, WPF, and SQL Server.</p>
+          <p>Outside of work, I like building practical tools with enough depth to teach me something: browser automation, static apps that handle real auth flows, Windows utilities, and algorithmic engines that stay understandable.</p>
+          <div class="skill-cloud" aria-label="Technologies">
+            <span>C#</span>
+            <span>.NET</span>
+            <span>Python</span>
+            <span>TypeScript</span>
+            <span>JavaScript</span>
+            <span>WPF</span>
+            <span>SQL Server</span>
+            <span>Chrome APIs</span>
+            <span>GitHub Pages</span>
           </div>
-          
-          <div class="social-links">
-            <a href="https://github.com/MaxwellMetzner" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-              </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/maxwell-metzner" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                <rect x="2" y="9" width="4" height="12"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-              </svg>
-            </a>
-            <a href="mailto:maxwell.metzner@gmail.com" aria-label="Email" class="social-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-            </a>
-            <a href="resume.pdf" target="_blank" aria-label="Resume" class="social-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-                <polyline points="10 9 9 9 8 9"></polyline>
-              </svg>
-            </a>
-          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section-band" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Have a project, role, or strange workflow worth untangling?</h2>
+          <p>I am open to software engineering opportunities and collaborations around developer tools, automation, static web apps, and practical product engineering.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button--primary" href="mailto:maxwell.metzner@gmail.com">
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4V6Zm0 0 8 7 8-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Email</span>
+          </a>
+          <button class="button" type="button" id="copy-email" data-email="maxwell.metzner@gmail.com">
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M8 8h12v12H8V8Zm-4 8V4h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Copy Email</span>
+          </button>
+          <a class="button" href="https://github.com/MaxwellMetzner" target="_blank" rel="noopener noreferrer">
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.1-.3 6-1.5 6-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.6 0C5.8-.1 4.7.2 4.7.2a4.8 4.8 0 0 0-.1 3.5A5.2 5.2 0 0 0 3.2 7.8c0 5.2 3 6.4 6 6.7a4.3 4.3 0 0 0-.8 2.6v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>GitHub</span>
+          </a>
+          <a class="button" href="https://www.linkedin.com/in/maxwell-metzner/" target="_blank" rel="noopener noreferrer">
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4V9h4v2a5 5 0 0 1 2-3ZM2 9h4v11H2V9Zm2-5a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>LinkedIn</span>
+          </a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>Designed & Built by Maxwell Metzner</p>
-      <p class="footer-year">© <span id="current-year"></span></p>
-    </div>
+  <footer class="site-footer">
+    <p>Built by Maxwell Metzner. <span id="current-year">2026</span></p>
+    <a href="#home">Back to top</a>
   </footer>
 
-  <!-- Scroll to top button -->
-  <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" title="Scroll to top">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="18 15 12 9 6 15"></polyline>
-    </svg>
-  </button>
-
-  <!-- Theme status for screen readers -->
-  <div id="theme-status" aria-live="polite" class="sr-only">Light mode enabled</div>
+  <div class="sr-only" id="status-message" aria-live="polite"></div>
 </body>
 
 </html>

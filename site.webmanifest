@@ -1,5 +1,5 @@
 {
-  "name": "Maxwell Metzner | Software Developer",
+  "name": "Maxwell Metzner | Software Engineer",
   "short_name": "Maxwell Metzner",
   "icons": [
     {
@@ -13,8 +13,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#0a0a0f",
-  "background_color": "#0a0a0f",
+  "theme_color": "#111827",
+  "background_color": "#0c1014",
   "display": "standalone",
   "start_url": "/"
 }
