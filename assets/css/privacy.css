@@ -1,0 +1,277 @@
+:root {
+  color-scheme: light;
+  --policy-bg: #eef1e9;
+  --policy-bg-strong: #f9f7f1;
+  --policy-surface: rgba(255, 255, 252, 0.88);
+  --policy-surface-strong: #ffffff;
+  --policy-text: #17202a;
+  --policy-muted: #5a6470;
+  --policy-line: rgba(23, 32, 42, 0.12);
+  --policy-line-strong: rgba(23, 32, 42, 0.2);
+  --policy-accent: #0f766e;
+  --policy-accent-strong: #0f4f4a;
+  --policy-highlight: rgba(245, 188, 78, 0.18);
+  --policy-shadow: 0 26px 70px rgba(17, 24, 39, 0.14);
+  --policy-radius: 28px;
+  --policy-radius-small: 18px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(15, 118, 110, 0.18), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(245, 188, 78, 0.26), transparent 26%),
+    linear-gradient(180deg, var(--policy-bg-strong) 0%, var(--policy-bg) 54%, #f7f9f5 100%);
+  color: var(--policy-text);
+  font-family: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.68;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(15, 118, 110, 0.04) 0 1px, transparent 1px 100%),
+    linear-gradient(180deg, rgba(15, 118, 110, 0.04) 0 1px, transparent 1px 100%);
+  background-size: 72px 72px;
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent 92%);
+  mask-image: linear-gradient(to bottom, black, transparent 92%);
+}
+
+a {
+  color: var(--policy-accent-strong);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.16em;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--policy-accent);
+}
+
+code {
+  padding: 0.14rem 0.36rem;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.1);
+  color: var(--policy-accent-strong);
+  font-family: Consolas, "SFMono-Regular", monospace;
+  font-size: 0.94em;
+}
+
+.policy-page {
+  position: relative;
+  width: min(1040px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 40px 0 72px;
+}
+
+.policy-hero,
+.policy-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--policy-line);
+  border-radius: var(--policy-radius);
+  background: var(--policy-surface);
+  box-shadow: var(--policy-shadow);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+
+.policy-hero::after,
+.policy-card::after {
+  content: "";
+  position: absolute;
+  inset: auto auto 0 0;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, var(--policy-highlight), transparent 68%);
+  pointer-events: none;
+}
+
+.policy-hero {
+  padding: 36px;
+}
+
+.policy-kicker {
+  margin: 0 0 12px;
+  color: var(--policy-accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.1;
+}
+
+h1 {
+  max-width: 12ch;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  font-size: clamp(1.35rem, 3vw, 2rem);
+}
+
+h3 {
+  font-size: 1rem;
+  color: var(--policy-accent);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+p,
+ul,
+ol,
+table {
+  margin: 0;
+}
+
+.policy-lede {
+  max-width: 68ch;
+  margin-top: 18px;
+  color: var(--policy-muted);
+  font-size: 1.08rem;
+}
+
+.policy-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.policy-meta span {
+  padding: 8px 14px;
+  border: 1px solid var(--policy-line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--policy-muted);
+  font-size: 0.95rem;
+}
+
+.policy-callout {
+  margin-top: 22px;
+  padding: 18px 20px;
+  border: 1px solid rgba(15, 118, 110, 0.14);
+  border-radius: var(--policy-radius-small);
+  background:
+    linear-gradient(180deg, rgba(245, 188, 78, 0.18), rgba(255, 255, 255, 0.82)),
+    var(--policy-surface-strong);
+}
+
+.policy-callout strong {
+  color: var(--policy-accent-strong);
+}
+
+.policy-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.policy-card {
+  grid-column: span 12;
+  padding: 28px;
+}
+
+.policy-card--half {
+  grid-column: span 6;
+}
+
+.policy-card--third {
+  grid-column: span 4;
+}
+
+.policy-card > * + *,
+.policy-stack > * + * {
+  margin-top: 14px;
+}
+
+ul,
+ol {
+  padding-left: 20px;
+}
+
+li + li {
+  margin-top: 10px;
+}
+
+.policy-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.policy-table th,
+.policy-table td {
+  padding: 14px 12px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid var(--policy-line);
+}
+
+.policy-table th {
+  width: 28%;
+  color: var(--policy-accent-strong);
+  font-weight: 700;
+}
+
+.policy-note {
+  color: var(--policy-muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 820px) {
+  .policy-page {
+    width: min(100% - 20px, 1040px);
+    padding: 20px 0 40px;
+  }
+
+  .policy-hero,
+  .policy-card {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .policy-card--half,
+  .policy-card--third {
+    grid-column: span 12;
+  }
+
+  h1 {
+    max-width: none;
+  }
+
+  .policy-table th,
+  .policy-table td {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .policy-table td {
+    border-top: none;
+    padding-bottom: 14px;
+  }
+}

@@ -8,316 +8,143 @@
     name="description"
     content="Privacy policy for the Tab Volume Adjuster Chrome extension."
   >
-  <style>
-    :root {
-      color-scheme: light;
-      --page-bg: linear-gradient(180deg, #f7efe2 0%, #f3f6fb 52%, #ffffff 100%);
-      --ink: #1d2430;
-      --muted: #556070;
-      --card: rgba(255, 255, 255, 0.9);
-      --line: rgba(29, 36, 48, 0.12);
-      --accent: #0d6b61;
-      --accent-soft: rgba(13, 107, 97, 0.1);
-      --shadow: 0 24px 60px rgba(40, 51, 68, 0.14);
-      --body-font: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-      --ui-font: "Segoe UI Variable", "Trebuchet MS", "Gill Sans", sans-serif;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: var(--page-bg);
-      color: var(--ink);
-      font-family: var(--body-font);
-      line-height: 1.65;
-    }
-
-    .page {
-      width: min(960px, calc(100% - 32px));
-      margin: 0 auto;
-      padding: 40px 0 72px;
-    }
-
-    .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 32px;
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      background:
-        radial-gradient(circle at top right, rgba(13, 107, 97, 0.18), transparent 30%),
-        radial-gradient(circle at bottom left, rgba(211, 139, 77, 0.16), transparent 28%),
-        var(--card);
-      box-shadow: var(--shadow);
-    }
-
-    .eyebrow,
-    .meta,
-    nav,
-    h2,
-    h3,
-    strong {
-      font-family: var(--ui-font);
-    }
-
-    .eyebrow {
-      margin: 0 0 12px;
-      color: var(--accent);
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      margin: 0;
-      max-width: 12ch;
-      font-size: clamp(2.5rem, 6vw, 4.4rem);
-      line-height: 0.95;
-      letter-spacing: -0.04em;
-    }
-
-    .hero p {
-      max-width: 62ch;
-      margin: 20px 0 0;
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 22px;
-    }
-
-    .meta span {
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-size: 0.92rem;
-      font-weight: 600;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 24px 0 0;
-    }
-
-    nav a {
-      color: var(--ink);
-      text-decoration: none;
-      padding: 9px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.72);
-      font-size: 0.94rem;
-    }
-
-    nav a:hover,
-    nav a:focus-visible {
-      border-color: var(--accent);
-      color: var(--accent);
-      outline: none;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(12, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 18px;
-    }
-
-    .card {
-      grid-column: span 12;
-      padding: 26px;
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      background: var(--card);
-      box-shadow: var(--shadow);
-      -webkit-backdrop-filter: blur(12px);
-      backdrop-filter: blur(12px);
-    }
-
-    .card--half {
-      grid-column: span 6;
-    }
-
-    h2 {
-      margin: 0 0 14px;
-      font-size: 1.1rem;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-    }
-
-    h3 {
-      margin: 20px 0 8px;
-      font-size: 0.98rem;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-
-    p,
-    li {
-      font-size: 1rem;
-    }
-
-    p:last-child,
-    ul:last-child {
-      margin-bottom: 0;
-    }
-
-    ul {
-      margin: 12px 0 0;
-      padding-left: 20px;
-    }
-
-    li + li {
-      margin-top: 10px;
-    }
-
-    .callout {
-      padding: 16px 18px;
-      border-radius: 18px;
-      background: rgba(13, 107, 97, 0.08);
-      border: 1px solid rgba(13, 107, 97, 0.16);
-    }
-
-    .footnote {
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    a {
-      color: var(--accent);
-    }
-
-    @media (max-width: 760px) {
-      .page {
-        width: min(100% - 20px, 960px);
-        padding: 20px 0 40px;
-      }
-
-      .hero,
-      .card {
-        padding: 22px;
-        border-radius: 22px;
-      }
-
-      .card--half {
-        grid-column: span 12;
-      }
-
-      h1 {
-        max-width: none;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="../assets/css/privacy.css">
 </head>
 <body>
-  <main class="page">
-    <section class="hero">
-      <p class="eyebrow">Privacy Policy</p>
+  <main class="policy-page">
+    <section class="policy-hero">
+      <p class="policy-kicker">Privacy Policy</p>
       <h1>Tab Volume Adjuster</h1>
-      <p>
-        Tab Volume Adjuster is a Chrome extension that lets a user change the volume,
-        mute state, and mono output of individual browser tabs, with optional per-site saved settings.
+      <p class="policy-lede">
+        Tab Volume Adjuster is a Chrome extension that lets a user change the volume, mute state,
+        and mono output of individual browser tabs, with optional per-site saved settings.
       </p>
-      <div class="meta">
+      <div class="policy-meta">
         <span>Last updated: May 27, 2026</span>
-        <span>Applies to the Chrome extension only</span>
+        <span>Chrome extension only</span>
+        <span>Local browser storage</span>
+        <span>No remote code</span>
       </div>
-      <nav aria-label="Sections">
-        <a href="#summary">Summary</a>
-        <a href="#data">Data Handling</a>
-        <a href="#permissions">Permissions</a>
-        <a href="#storage">Storage</a>
-        <a href="#sharing">Sharing</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <div class="policy-callout">
+        <strong>Short version:</strong> Tab Volume Adjuster processes tab audio and limited tab
+        metadata locally on the user's device to provide its core volume-control feature. It does
+        not send user data to the developer or to third parties, does not sell user data, and does
+        not use remote code.
+      </div>
     </section>
 
-    <section class="grid">
-      <article class="card" id="summary">
-        <h2>Summary</h2>
-        <div class="callout">
-          <strong>Short version:</strong> Tab Volume Adjuster processes tab audio and limited tab metadata locally on the user's device to provide its core volume-control feature. It does not send user data to the developer or to third parties, does not sell user data, and does not use remote code.
-        </div>
-      </article>
-
-      <article class="card card--half" id="data">
+    <section class="policy-grid">
+      <article class="policy-card policy-stack">
         <h2>Data Handling</h2>
         <h3>What the extension accesses</h3>
         <ul>
-          <li>The active tab's audio stream when the user applies a volume, mute, or mono change.</li>
-          <li>The current tab URL and hostname so the extension can determine whether the page is supported and optionally restore saved per-site settings.</li>
-          <li>The URLs, titles, favicon URLs, and audible state of currently audible tabs so the popup can show a tab list and let the user switch to a tab they choose.</li>
+          <li>
+            The active tab's audio stream when the user applies a volume, mute, or mono change.
+          </li>
+          <li>
+            The current tab URL and hostname so the extension can determine whether the page is
+            supported and optionally restore saved per-site settings.
+          </li>
+          <li>
+            The URLs, titles, favicon URLs, and audible state of currently audible tabs so the
+            popup can show a tab list and let the user switch to a tab they choose.
+          </li>
         </ul>
         <h3>What the extension does not do</h3>
         <ul>
-          <li>It does not collect personally identifiable information such as name, email address, phone number, or government identifiers.</li>
-          <li>It does not read page text, form entries, passwords, messages, or any other page content beyond the audio stream needed for playback adjustment.</li>
+          <li>
+            It does not collect personally identifiable information such as name, email address,
+            phone number, or government identifiers.
+          </li>
+          <li>
+            It does not read page text, form entries, passwords, messages, or any other page
+            content beyond the audio stream needed for playback adjustment.
+          </li>
           <li>It does not transmit browsing data or audio data off the device.</li>
         </ul>
       </article>
 
-      <article class="card card--half" id="storage">
+      <article class="policy-card policy-card--half policy-stack">
         <h2>Local Storage</h2>
-        <p>The extension stores the following data in <strong>chrome.storage.local</strong> on the user's device:</p>
+        <p>
+          The extension stores the following data in <strong>chrome.storage.local</strong> on the
+          user's device:
+        </p>
         <ul>
-          <li>Extension settings such as minimum volume, maximum volume, slider step size, whether per-site persistence is enabled, whether saved settings auto-apply, and whether the audible tab list is shown.</li>
-          <li>Saved per-site audio profiles keyed by hostname only, such as <strong>example.com</strong>, containing the selected volume, mute state, and mono setting.</li>
+          <li>
+            Extension settings such as minimum volume, maximum volume, slider step size, whether
+            per-site persistence is enabled, whether saved settings auto-apply, and whether the
+            audible tab list is shown.
+          </li>
+          <li>
+            Saved per-site audio profiles keyed by hostname only, such as <strong>example.com</strong>,
+            containing the selected volume, mute state, and mono setting.
+          </li>
         </ul>
-        <p class="footnote">The extension does not store full browsing history, account credentials, or the captured audio stream.</p>
+        <p class="policy-note">
+          The extension does not store full browsing history, account credentials, or the captured
+          audio stream.
+        </p>
       </article>
 
-      <article class="card" id="permissions">
+      <article class="policy-card policy-card--half policy-stack">
+        <h2>Retention And Security</h2>
+        <p>
+          Saved settings remain in the browser until the user changes them, clears them from the
+          extension, or uninstalls the extension. Because the extension keeps its data locally in
+          the user's browser storage, the user controls when that data is removed.
+        </p>
+      </article>
+
+      <article class="policy-card policy-stack">
         <h2>Permissions Used</h2>
         <ul>
-          <li><strong>offscreen</strong>: keeps a local offscreen document alive so audio processing can continue after the popup closes.</li>
-          <li><strong>storage</strong>: saves user preferences and per-site audio settings locally in the browser.</li>
-          <li><strong>tabCapture</strong>: captures the selected tab's audio stream so the extension can apply volume and mono adjustments.</li>
-          <li><strong>tabs</strong>: reads the active tab and audible tabs needed for the popup UI, focuses a user-selected tab, and reacts to tab updates and removals.</li>
-          <li><strong>Host access on http://*/* and https://*/*</strong>: runs a lightweight content script that detects in-page navigation changes on regular websites so saved settings can be reapplied when a single-page app changes routes.</li>
+          <li>
+            <strong>offscreen</strong>: keeps a local offscreen document alive so audio processing
+            can continue after the popup closes.
+          </li>
+          <li>
+            <strong>storage</strong>: saves user preferences and per-site audio settings locally in
+            the browser.
+          </li>
+          <li>
+            <strong>tabCapture</strong>: captures the selected tab's audio stream so the extension
+            can apply volume and mono adjustments.
+          </li>
+          <li>
+            <strong>tabs</strong>: reads the active tab and audible tabs needed for the popup UI,
+            focuses a user-selected tab, and reacts to tab updates and removals.
+          </li>
+          <li>
+            <strong>Host access on http://*/* and https://*/*</strong>: runs a lightweight content
+            script that detects in-page navigation changes on regular websites so saved settings can
+            be reapplied when a single-page app changes routes.
+          </li>
         </ul>
       </article>
 
-      <article class="card card--half" id="sharing">
+      <article class="policy-card policy-card--half policy-stack">
         <h2>Sharing And Transfers</h2>
         <ul>
           <li>No user data is sold.</li>
-          <li>No user data is transferred to advertisers, data brokers, analytics providers, or other third parties.</li>
+          <li>
+            No user data is transferred to advertisers, data brokers, analytics providers, or
+            other third parties.
+          </li>
           <li>No user data is used for creditworthiness, lending, advertising, or profiling.</li>
           <li>The extension does not load remote JavaScript or WebAssembly code.</li>
         </ul>
       </article>
 
-      <article class="card card--half">
-        <h2>Retention And Security</h2>
-        <p>
-          Saved settings remain in the browser until the user changes them, clears them from the extension,
-          or uninstalls the extension. Because the extension keeps its data locally in the user's browser storage,
-          the user controls when that data is removed.
-        </p>
-      </article>
-
-      <article class="card" id="contact">
+      <article class="policy-card policy-card--half policy-stack">
         <h2>Contact</h2>
         <p>
           Questions about this policy or the extension can be directed to the site owner through
           <a href="https://maxwellmetzner.github.io/">maxwellmetzner.github.io</a>.
         </p>
-        <p class="footnote">
-          If the extension's data practices change, this policy should be updated before a new version is published.
+        <p class="policy-note">
+          If the extension's data practices change, this policy should be updated before a new
+          version is published.
         </p>
       </article>
     </section>

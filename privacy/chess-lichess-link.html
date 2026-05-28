@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy | Chess.com to Lichess Import</title>
+    <meta
+      name="description"
+      content="Privacy Policy for the Chess.com to Lichess Import Chrome extension."
+    />
+    <link rel="stylesheet" href="../assets/css/privacy.css" />
+  </head>
+  <body>
+    <main class="policy-page">
+      <section class="policy-hero">
+        <p class="policy-kicker">Privacy Policy</p>
+        <h1>Chess.com to Lichess Import</h1>
+        <p class="policy-lede">
+          This extension exists for one job: when you click the extension on a supported
+          Chess.com game page, it reads that game's PGN and opens the Lichess import page with the
+          PGN ready to submit.
+        </p>
+        <div class="policy-meta">
+          <span>Last updated: May 28, 2026</span>
+          <span>Chrome extension</span>
+          <span>No analytics</span>
+          <span>Temporary session storage only</span>
+        </div>
+        <div class="policy-callout">
+          <strong>Short version:</strong> the extension processes game PGN locally in your browser
+          and uses temporary session storage only long enough to pass the PGN from the Chess.com
+          page to the Lichess import page.
+        </div>
+      </section>
+
+      <section class="policy-grid">
+        <article class="policy-card policy-stack">
+          <h2>What data is processed</h2>
+          <p>
+            The extension only processes the minimum data needed to complete the import you
+            request.
+          </p>
+          <ul>
+            <li>The PGN of the currently open Chess.com game.</li>
+            <li>The source Chess.com page URL for that import.</li>
+            <li>
+              A temporary random import ID and timestamp used to match the PGN to the new Lichess
+              tab.
+            </li>
+          </ul>
+          <p class="policy-note">
+            The extension does not collect account credentials, payment information, browsing
+            history outside supported pages, analytics identifiers, or advertising data.
+          </p>
+        </article>
+
+        <article class="policy-card policy-card--half policy-stack">
+          <h2>How the data is used</h2>
+          <ul>
+            <li>Read the PGN from the Share dialog on a supported Chess.com game page.</li>
+            <li>
+              Temporarily hold the PGN inside the browser session while a Lichess import tab
+              opens.
+            </li>
+            <li>Fill the PGN into the form on lichess.org/paste and submit that form.</li>
+          </ul>
+        </article>
+
+        <article class="policy-card policy-card--half policy-stack">
+          <h2>How long data is kept</h2>
+          <ul>
+            <li>Pending import data is stored in Chrome session storage, not synced to any server.</li>
+            <li>The stored item is removed after the Lichess page receives it and the import begins.</li>
+            <li>If the import is not completed, the data lasts only until the current browser session ends.</li>
+          </ul>
+        </article>
+
+        <article class="policy-card policy-stack">
+          <h2>Permissions used by the extension</h2>
+          <table class="policy-table">
+            <tbody>
+              <tr>
+                <th scope="row">storage</th>
+                <td>
+                  Used only for temporary session storage of the PGN, source URL, timestamp, and a
+                  random import ID while moving the import from Chess.com to Lichess.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">tabs</th>
+                <td>
+                  Used to check whether the current tab is a supported Chess.com game page, update
+                  the extension badge for that tab, and open a new Lichess import tab.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">scripting</th>
+                <td>
+                  Used to re-inject the packaged Chess.com content script into the current tab if
+                  the page lifecycle caused the original receiver to disappear before you click the
+                  extension.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Host permissions</th>
+                <td>
+                  Limited to https://www.chess.com/* and https://lichess.org/* so the extension
+                  can read PGN from supported Chess.com game pages and fill the import form on the
+                  Lichess paste page.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+
+        <article class="policy-card policy-card--half policy-stack">
+          <h2>Remote code</h2>
+          <p>
+            No remote code is used. All extension logic is packaged with the extension itself. The
+            extension does not download or execute JavaScript from the developer or any third-party
+            server after installation.
+          </p>
+        </article>
+
+        <article class="policy-card policy-card--half policy-stack">
+          <h2>Third-party transfer</h2>
+          <p>
+            When you click import, the PGN is submitted to Lichess because that is the requested
+            function of the extension. Outside of that user-initiated transfer, the extension does
+            not send your data to the developer or use it for analytics, advertising, or sale.
+          </p>
+        </article>
+
+        <article class="policy-card policy-stack">
+          <h2>Single purpose</h2>
+          <p>
+            The extension's sole purpose is to move the PGN of the currently open Chess.com game
+            into the Lichess import page when the user clicks the extension action.
+          </p>
+        </article>
+
+        <article class="policy-card policy-stack">
+          <h2>Questions</h2>
+          <p>
+            For project updates or support, visit the repository issue tracker:
+            <a href="https://github.com/MaxwellMetzner/Chess.com-Lichess-Link/issues"
+              >github.com/MaxwellMetzner/Chess.com-Lichess-Link/issues</a
+            >
+          </p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
