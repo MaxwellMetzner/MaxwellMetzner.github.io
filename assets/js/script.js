@@ -103,74 +103,91 @@
   const initProjectTools = () => {
     const controls = document.querySelector('[data-project-controls]');
     const cards = [...document.querySelectorAll('[data-project-card]')];
-    const lists = [...document.querySelectorAll('[data-project-list]')];
-    const filterButtons = [...document.querySelectorAll('[data-filter]')];
+    const categoryButtons = [...document.querySelectorAll('[data-category-filter]')];
     const searchInput = document.getElementById('project-search');
-    const sortSelect = document.getElementById('project-sort');
+    const grid = document.querySelector('[data-project-list]');
+    const projectKicker = document.querySelector('[data-project-kicker]');
+    const projectTitle = document.querySelector('[data-project-title]');
+    const projectCopy = document.querySelector('[data-project-copy]');
+    const emptyState = document.querySelector('[data-project-empty]');
+    const emptyKicker = document.querySelector('[data-project-empty-kicker]');
+    const emptyTitle = document.querySelector('[data-project-empty-title]');
+    const emptyCopy = document.querySelector('[data-project-empty-copy]');
 
-    if (!controls || !cards.length) return;
+    if (!controls || !cards.length || !categoryButtons.length) return;
 
-    let activeFilter = 'all';
+    let activeCategory = '';
     let searchTerm = '';
-
-    const matchesFilter = (card) => {
-      if (activeFilter === 'all') return true;
-      return card.dataset.status === activeFilter || card.dataset.category === activeFilter;
-    };
 
     const matchesSearch = (card) => {
       if (!searchTerm) return true;
       return card.dataset.search?.includes(searchTerm);
     };
 
+    const setEmptyState = (kicker, title, copy) => {
+      if (emptyKicker) emptyKicker.textContent = kicker;
+      if (emptyTitle) emptyTitle.textContent = title;
+      if (emptyCopy) emptyCopy.textContent = copy;
+    };
+
     const updateProjects = () => {
-      let visibleCount = 0;
+      const visibleCards = [];
 
       cards.forEach((card) => {
-        const isVisible = matchesFilter(card) && matchesSearch(card);
+        const isVisible = Boolean(activeCategory) && card.dataset.category === activeCategory && matchesSearch(card);
         card.hidden = !isVisible;
-        if (isVisible) visibleCount += 1;
+        card.classList.remove('is-spotlight');
+        if (isVisible) visibleCards.push(card);
       });
 
-      announce(`${visibleCount} projects shown`);
+      visibleCards[0]?.classList.add('is-spotlight');
+
+      if (grid) grid.hidden = !activeCategory || visibleCards.length === 0;
+
+      if (!activeCategory) {
+        setEmptyState('Ready', 'Pick a category.', 'Category cards on the left control which projects are rendered here.');
+        if (emptyState) emptyState.hidden = false;
+        announce('No project category selected');
+        return;
+      }
+
+      if (!visibleCards.length) {
+        setEmptyState('No matches', `No matches in ${activeCategory}.`, 'Try another search term or switch categories.');
+        if (emptyState) emptyState.hidden = false;
+        announce(`No projects found in ${activeCategory}`);
+        return;
+      }
+
+      if (emptyState) emptyState.hidden = true;
+      announce(`${visibleCards.length} ${activeCategory} projects shown`);
     };
 
-    const sortCards = () => {
-      const mode = sortSelect?.value ?? 'curated';
+    categoryButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        activeCategory = button.dataset.categoryFilter;
+        searchTerm = '';
 
-      lists.forEach((list) => {
-        const listCards = [...list.querySelectorAll('[data-project-card]')];
-        listCards.sort((a, b) => {
-          if (mode === 'recent') {
-            return new Date(b.dataset.updated) - new Date(a.dataset.updated);
-          }
+        if (searchInput) {
+          searchInput.value = '';
+          searchInput.disabled = false;
+        }
 
-          if (mode === 'name') {
-            return a.dataset.name.localeCompare(b.dataset.name);
-          }
-
-          return Number(a.dataset.order) - Number(b.dataset.order);
+        categoryButtons.forEach((candidate) => {
+          const isActive = candidate === button;
+          candidate.classList.toggle('active', isActive);
+          candidate.setAttribute('aria-pressed', String(isActive));
         });
 
-        listCards.forEach((card) => list.append(card));
-      });
-    };
+        if (projectKicker) projectKicker.textContent = button.dataset.categoryLabel ?? 'Selected category';
+        if (projectTitle) projectTitle.textContent = activeCategory;
+        if (projectCopy) projectCopy.textContent = button.dataset.categorySummary ?? '';
 
-    filterButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        activeFilter = button.dataset.filter;
-        filterButtons.forEach((candidate) => candidate.classList.toggle('active', candidate === button));
         updateProjects();
       });
     });
 
     searchInput?.addEventListener('input', () => {
       searchTerm = searchInput.value.trim().toLowerCase();
-      updateProjects();
-    });
-
-    sortSelect?.addEventListener('change', () => {
-      sortCards();
       updateProjects();
     });
 
@@ -187,7 +204,7 @@
       card.addEventListener('pointermove', setSpotlight, { passive: true });
     });
 
-    sortCards();
+    if (searchInput) searchInput.disabled = true;
     updateProjects();
   };
 

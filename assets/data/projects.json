@@ -1,20 +1,39 @@
 {
-  "selectionCriteria": [
+  "categories": [
     {
-      "name": "Visible mechanics",
-      "description": "Featured projects should expose the actual solver, worker, ranking, auth, desktop, or data-table pieces behind the UI."
+      "id": "live-demos",
+      "name": "Websites with live demos",
+      "label": "Live demos",
+      "summary": "Static apps, solver engines, and browser-first tools that can be opened and tested directly.",
+      "accent": "#2563eb"
     },
     {
-      "name": "Inspectable product surface",
-      "description": "The work should have a demo or source path where a visitor can verify the behavior instead of only reading claims."
+      "id": "docker-images",
+      "name": "Docker images",
+      "label": "Docker",
+      "summary": "Self-hosted services packaged for repeatable deployment and local ownership.",
+      "accent": "#0f766e"
     },
     {
-      "name": "Workflow value",
-      "description": "The project should solve a concrete task: solving a puzzle, planning stops, stabilizing video, editing playlists, or analyzing games."
+      "id": "standalone-apps",
+      "name": "Standalone Apps",
+      "label": "Standalone",
+      "summary": "Desktop, local, and CLI utilities for files, media, OCR, system paths, and sync work.",
+      "accent": "#f59e0b"
     },
     {
-      "name": "Honest previews",
-      "description": "Miniatures should resemble the real app surfaces, especially for web apps with their own CSS and layout language."
+      "id": "chrome-extensions",
+      "name": "Chrome Extensions",
+      "label": "Extensions",
+      "summary": "Manifest V3 extensions that reshape real browser workflows with focused controls.",
+      "accent": "#dc2626"
+    },
+    {
+      "id": "other",
+      "name": "Other",
+      "label": "Other",
+      "summary": "Archive material and supporting repositories that round out the portfolio.",
+      "accent": "#64748b"
     }
   ],
   "projects": [
@@ -23,19 +42,17 @@
       "order": 1,
       "name": "Casino Cheat Sheet",
       "repo": "Casino-Cheat-Sheet",
-      "category": "Analysis Engines",
+      "category": "Websites with live demos",
       "type": "Static web app",
       "status": "Live demo",
-      "featured": true,
       "accent": "#f97316",
-      "updated": "2026-04-28",
-      "headline": "Static Next.js dashboard with separate analyzers for roulette, baccarat, craps, blackjack, video poker, pai gow, and poker equity.",
-      "description": "Splits a pure TypeScript casino engine package from the web UI, then pushes slower equity and simulation work through a browser worker. Visitors can test combined roulette bets, finite-shoe blackjack EV, video-poker holds, and multiway Hold'em/Omaha/stud without any server runtime.",
-      "whyFeatured": "The important files are easy to inspect: packages/casino-engine/src owns the math, while apps/web/src/workers/casino-worker.ts keeps the static UI responsive.",
+      "updated": "2026-05-31",
+      "headline": "Static casino-analysis dashboard with exact combinatorics and poker equity tooling.",
+      "description": "Splits a Next.js static UI from a pure TypeScript engine package, then pushes expensive blackjack, video-poker, and poker-equity analysis through browser workers so the demo stays responsive.",
       "tech": ["TypeScript", "Next.js export", "Web Workers", "Combinatorics", "EV solving"],
       "metrics": [
-        { "label": "Live pages", "value": "10" },
-        { "label": "Worker", "value": "casino-worker" },
+        { "label": "Analyzers", "value": "10" },
+        { "label": "Runtime", "value": "Static" },
         { "label": "Engine", "value": "TS package" }
       ],
       "links": {
@@ -49,20 +66,18 @@
       "order": 2,
       "name": "LinkedIn Puzzle Solver",
       "repo": "LinkedinSolver",
-      "category": "Algorithms",
+      "category": "Websites with live demos",
       "type": "Static web app",
       "status": "Live demo",
-      "featured": true,
       "accent": "#2563eb",
-      "updated": "2026-04-21",
-      "headline": "Plain HTML/CSS/JS solver surface for Zip, Tango, Queens, Patches, and Mini Sudoku.",
-      "description": "Each puzzle has its own grid/input layer and solver file under js/solvers. The app validates impossible boards before search, then marks clues, generated cells, conflicts, and solved paths in the same interface used to enter the puzzle.",
-      "whyFeatured": "The value is visible in the UI: tabs, board editing, solve/reset controls, and solver-specific feedback rather than a black-box answer.",
+      "updated": "2026-05-27",
+      "headline": "Plain JavaScript solver surface for Zip, Tango, Queens, Patches, and Mini Sudoku.",
+      "description": "Each puzzle gets a dedicated input layer and solver path, with board validation, conflict feedback, generated cells, and solved-path markings visible in the same UI used to enter the puzzle.",
       "tech": ["JavaScript", "Backtracking", "Constraint propagation", "DFS", "Static UI"],
       "metrics": [
-        { "label": "Solver files", "value": "5" },
+        { "label": "Solvers", "value": "5" },
         { "label": "UI", "value": "Plain JS" },
-        { "label": "Validation", "value": "Before search" }
+        { "label": "Mode", "value": "Static" }
       ],
       "links": {
         "repo": "https://github.com/MaxwellMetzner/LinkedinSolver",
@@ -75,15 +90,13 @@
       "order": 3,
       "name": "Farkle Lab",
       "repo": "Farkle",
-      "category": "Game Theory",
+      "category": "Websites with live demos",
       "type": "Static web app",
       "status": "Live demo",
-      "featured": true,
       "accent": "#dc2626",
-      "updated": "2026-03-30",
+      "updated": "2026-05-31",
       "headline": "Playable human-vs-CPU Farkle with exact EV tables and an advisor panel.",
-      "description": "Precomputes expected values for one through six remaining dice, highlights legal scoring choices after each roll, and compares roll-vs-bank decisions against score, target, and late-game pressure.",
-      "whyFeatured": "Open app.js and the demo side by side: the game loop, scoring choices, CPU decisions, and advisor all share the same EV logic.",
+      "description": "Precomputes expected values for one through six remaining dice, highlights legal scoring choices after each roll, and compares roll-vs-bank decisions against score, target, and game pressure.",
       "tech": ["JavaScript", "Expected value", "Game AI", "Probability", "CSS"],
       "metrics": [
         { "label": "EV tables", "value": "1-6 dice" },
@@ -101,15 +114,13 @@
       "order": 4,
       "name": "Spotify Manager",
       "repo": "Spotify-Manager",
-      "category": "Data Workflow",
+      "category": "Websites with live demos",
       "type": "Static web app",
       "status": "Live demo",
-      "featured": true,
       "accent": "#16a34a",
-      "updated": "2026-03-20",
-      "headline": "Dark, table-first playlist workspace with browser-only Spotify PKCE auth.",
-      "description": "After setup, the app loads playlists, supports CSV-enriched metadata, sortable/resizable Tabulator columns, dedupe review, outlier scoring, transition diagnostics, undo/redo, and export to a new Spotify playlist.",
-      "whyFeatured": "It shows real product constraints in static hosting: OAuth callback pages, local token/config storage, and a dense data-table workflow.",
+      "updated": "2026-05-27",
+      "headline": "Table-first playlist workspace with browser-only Spotify PKCE auth.",
+      "description": "Loads playlists after browser PKCE setup, supports CSV-enriched metadata, sortable and resizable tables, dedupe review, outlier scoring, transition diagnostics, undo/redo, and playlist export.",
       "tech": ["JavaScript", "Spotify API", "OAuth PKCE", "Local storage", "Data tables"],
       "metrics": [
         { "label": "Auth", "value": "PKCE" },
@@ -123,19 +134,130 @@
       "preview": "playlist"
     },
     {
-      "id": "video-stabbot",
+      "id": "trip-planner",
       "order": 5,
-      "name": "Video Stabbot",
-      "repo": "Video-Stabbot",
-      "category": "Media Tools",
+      "name": "Trip Planner",
+      "repo": "Trip-Planner",
+      "category": "Websites with live demos",
+      "type": "Static web app",
+      "status": "Live demo",
+      "accent": "#0f766e",
+      "updated": "2026-05-28",
+      "headline": "Route-aware road trip planner that scores stops against timing, detour, daylight, and preferences.",
+      "description": "Builds an itinerary from route inputs, slots meals and optional stops into a timeline, supports deterministic demo mode or browser-side Google mode, and explains why each recommendation fits.",
+      "tech": ["TypeScript", "React", "Vite", "Routing", "Local storage"],
+      "metrics": [
+        { "label": "Planner", "value": "Client-side" },
+        { "label": "Modes", "value": "Demo/Google" },
+        { "label": "Explain", "value": "Score reasons" }
+      ],
+      "links": {
+        "repo": "https://github.com/MaxwellMetzner/Trip-Planner",
+        "demo": "https://maxwellmetzner.github.io/Trip-Planner/"
+      },
+      "preview": "route"
+    },
+    {
+      "id": "wordle-solver",
+      "order": 6,
+      "name": "Wordle Solver",
+      "repo": "Wordle-Solver",
+      "category": "Websites with live demos",
+      "type": "Static web app",
+      "status": "Live demo",
+      "accent": "#65a30d",
+      "updated": "2026-05-29",
+      "headline": "Client-side Wordle assistant with candidate filtering, hard-mode legality, and worker-backed scoring.",
+      "description": "Tracks feedback rows, handles duplicate letters correctly, ranks guesses by solve chance, information gain, balanced play, and minimax risk, then summarizes how efficiently each guess narrowed the search space.",
+      "tech": ["TypeScript", "Web Workers", "Heuristics", "Game AI", "Local storage"],
+      "metrics": [
+        { "label": "Rows", "value": "6" },
+        { "label": "Scoring", "value": "Worker" },
+        { "label": "Modes", "value": "Hard/balanced" }
+      ],
+      "links": {
+        "repo": "https://github.com/MaxwellMetzner/Wordle-Solver",
+        "demo": "https://maxwellmetzner.github.io/Wordle-Solver/"
+      },
+      "preview": "wordle"
+    },
+    {
+      "id": "change-monitor",
+      "order": 7,
+      "name": "Change Monitor",
+      "repo": "Change-Monitor",
+      "category": "Docker images",
+      "type": "Dockerized web app",
+      "status": "Docker image",
+      "accent": "#0891b2",
+      "updated": "2026-05-28",
+      "headline": "Self-hosted page and element monitor with rendered checks, diff rules, and Pushover alerts.",
+      "description": "Combines a FastAPI backend, SQLite persistence, a React/Vite frontend, Playwright Chromium rendering, text and visual baselines, scheduler backoff, encrypted local notification settings, and image build checks.",
+      "tech": ["Python", "FastAPI", "React", "Docker", "Playwright"],
+      "metrics": [
+        { "label": "Backend", "value": "FastAPI" },
+        { "label": "Browser", "value": "Playwright" },
+        { "label": "Alerts", "value": "Pushover" }
+      ],
+      "links": {
+        "repo": "https://github.com/MaxwellMetzner/Change-Monitor",
+        "docker": "https://hub.docker.com/repository/docker/max1234565/changemonitor"
+      },
+      "preview": "monitor"
+    },
+    {
+      "id": "regex-isolator",
+      "order": 8,
+      "name": "Regex Isolator",
+      "repo": "Regex-Isolator",
+      "category": "Standalone Apps",
       "type": "Desktop app",
       "status": "Source",
-      "featured": true,
-      "accent": "#0891b2",
-      "updated": "2026-03-01",
+      "accent": "#7c3aed",
+      "updated": "2026-05-27",
+      "headline": "Lightweight desktop regex workbench for extracting matches from large text.",
+      "description": "Uses Python standard-library UI pieces for live or manual matching, highlighting, click-to-jump results, flags, presets, file I/O, and cache controls for very large inputs.",
+      "tech": ["Python", "Tkinter", "Regex", "File I/O"],
+      "links": {
+        "repo": "https://github.com/MaxwellMetzner/Regex-Isolator"
+      },
+      "preview": "regex"
+    },
+    {
+      "id": "text-recognition-studio",
+      "order": 9,
+      "name": "Text Recognition Studio",
+      "repo": "Text-Recognition",
+      "category": "Standalone Apps",
+      "type": "Desktop app",
+      "status": "Source",
+      "accent": "#9333ea",
+      "updated": "2026-05-30",
+      "headline": "Local OCR studio for images, scanned PDFs, camera captures, QR/barcodes, and batch exports.",
+      "description": "Wraps multiple OCR paths with image cleanup, region OCR, scanned-PDF rendering, language detection, confidence review, history restore, comparison diffs, and export formats for text, Markdown, tables, JSON, and ZIP bundles.",
+      "tech": ["Electron", "Python", "Tesseract", "PyMuPDF", "OpenCV"],
+      "metrics": [
+        { "label": "Inputs", "value": "Images/PDF" },
+        { "label": "Review", "value": "Confidence" },
+        { "label": "Exports", "value": "5 formats" }
+      ],
+      "links": {
+        "repo": "https://github.com/MaxwellMetzner/Text-Recognition"
+      },
+      "preview": "ocr"
+    },
+    {
+      "id": "video-stabbot",
+      "order": 10,
+      "name": "Video Stabbot",
+      "repo": "Video-Stabbot",
+      "category": "Standalone Apps",
+      "type": "Desktop app",
+      "status": "Source",
+      "accent": "#0e7490",
+      "updated": "2026-05-27",
       "headline": "Electron video stabilization UI that wraps FFmpeg vidstab, OpenCV features, and RAFT optical flow.",
       "description": "Detects dependencies and GPU encoders, accepts drag-and-drop video input, offers preset and advanced stabilization modes, streams progress, and calls Python/OpenCV/PyTorch scripts for heavier analysis paths.",
-      "whyFeatured": "This is a desktop systems sample: renderer UX, main-process detection, external binaries, Python workers, and media pipelines have to cooperate.",
       "tech": ["Electron", "FFmpeg", "OpenCV", "PyTorch", "RAFT"],
       "metrics": [
         { "label": "Input", "value": "Drag/drop" },
@@ -148,80 +270,126 @@
       "preview": "video"
     },
     {
-      "id": "trip-planner",
-      "order": 6,
-      "name": "Trip Planner",
-      "repo": "Trip-Planner",
-      "category": "Planning Systems",
-      "type": "Static web app",
-      "status": "Source",
-      "featured": true,
-      "accent": "#0f766e",
-      "updated": "2026-03-31",
-      "headline": "React/Vite itinerary planner that scores stops against route timing, detour, daylight, and preferences.",
-      "description": "The guided form builds a route request, then the planner slots meals and optional stops into a timeline. It can run in deterministic demo mode or browser-side Google mode, with local saved trips and explanations for each recommendation.",
-      "whyFeatured": "The ranking pipeline is visible in src/lib/planner: slots, scoring, daylight, provider adapters, and replace/pin/skip interactions stay client-side.",
-      "tech": ["TypeScript", "React", "Vite", "Routing", "Local storage"],
-      "metrics": [
-        { "label": "Planner", "value": "Client-side" },
-        { "label": "Modes", "value": "Demo/Google" },
-        { "label": "Explain", "value": "Score reasons" }
-      ],
-      "links": {
-        "repo": "https://github.com/MaxwellMetzner/Trip-Planner"
-      },
-      "preview": "route"
-    },
-    {
-      "id": "regex-isolator",
-      "order": 7,
-      "name": "Regex Isolator",
-      "repo": "Regex-Isolator",
-      "category": "Developer Tools",
+      "id": "path-manager",
+      "order": 11,
+      "name": "PATH Manager",
+      "repo": "PATH-Manager",
+      "category": "Standalone Apps",
       "type": "Desktop app",
       "status": "Source",
-      "featured": false,
-      "accent": "#7c3aed",
-      "updated": "2026-04-01",
-      "headline": "A zero-dependency regex workbench for testing patterns against large text.",
-      "description": "Uses Python's standard library to provide live or manual matching, highlighting, click-to-jump results, flags, presets, file I/O, and a cache/unload mode for huge inputs.",
-      "tech": ["Python", "Tkinter", "Regex", "Desktop UI"],
+      "accent": "#475569",
+      "updated": "2026-05-29",
+      "headline": "Safer Windows PATH editor with diagnostics, backups, and a cleaner UX than the default dialog.",
+      "description": "Turns PATH editing into a reorderable local UI with user/system scopes, missing-path cleanup, duplicate detection, command shadowing, risk warnings, backup snapshots, and admin-aware saving.",
+      "tech": ["Python", "Tkinter", "Windows Registry", "Diagnostics"],
       "links": {
-        "repo": "https://github.com/MaxwellMetzner/Regex-Isolator"
+        "repo": "https://github.com/MaxwellMetzner/PATH-Manager"
+      },
+      "preview": "desktop"
+    },
+    {
+      "id": "chrome-extension-code-viewer",
+      "order": 12,
+      "name": "Chrome Extension Code Viewer",
+      "repo": "Chrome-Extension-Code-Viewer",
+      "category": "Standalone Apps",
+      "type": "Local web tool",
+      "status": "Source",
+      "accent": "#334155",
+      "updated": "2026-05-29",
+      "headline": "Local PowerShell app for reviewing installed Chrome extensions, entry points, and metadata.",
+      "description": "Scans Chrome profile extension folders, resolves installed, component, and unpacked extensions, serves a localhost UI, supports console/JSON output, and can include Web Store metadata when requested.",
+      "tech": ["PowerShell", "Localhost UI", "Chrome profiles", "Manifest parsing"],
+      "links": {
+        "repo": "https://github.com/MaxwellMetzner/Chrome-Extension-Code-Viewer"
       },
       "preview": "terminal"
     },
     {
-      "id": "volume-adjuster",
-      "order": 8,
-      "name": "Tab Volume Adjuster",
-      "repo": "Volume-Adjuster",
-      "category": "Browser Extensions",
+      "id": "apple-backup-exporter",
+      "order": 13,
+      "name": "Apple Backup Exporter",
+      "category": "Standalone Apps",
+      "type": "Desktop utility",
+      "status": "Unlisted",
+      "accent": "#64748b",
+      "updatedLabel": "Unlisted",
+      "headline": "Local utility for exporting usable files and records from Apple device backup data.",
+      "description": "Included here as an unlisted project because there is no public repository currently available. The portfolio card preserves its place in the standalone-app sequence without inventing a source link.",
+      "tech": ["Local files", "Backup parsing", "Export workflow"],
+      "links": {},
+      "preview": "desktop"
+    },
+    {
+      "id": "steam-onenote-sync",
+      "order": 14,
+      "name": "Steam-OneNote Sync",
+      "repo": "Steam-OneNote-Sync",
+      "category": "Standalone Apps",
+      "type": "CLI app",
+      "status": "Source",
+      "accent": "#7c3aed",
+      "updated": "2026-05-29",
+      "headline": "Bidirectional sync bridge between local Steam game notes and Microsoft OneNote.",
+      "description": "Normalizes both systems into a canonical note model, previews push/pull/sync writes, tracks OneNote pages with sidecar state, and projects rich OneNote content back to Steam's safer subset.",
+      "tech": ["Python", "Microsoft Graph", "Device code auth", "Sync engine"],
+      "links": {
+        "repo": "https://github.com/MaxwellMetzner/Steam-OneNote-Sync"
+      },
+      "preview": "sync"
+    },
+    {
+      "id": "image-inspector",
+      "order": 15,
+      "name": "Image Inspector",
+      "repo": "ImageInspector",
+      "category": "Chrome Extensions",
       "type": "Chrome extension",
       "status": "Source",
-      "featured": false,
-      "accent": "#06b6d4",
-      "updated": "2026-04-01",
-      "headline": "A focused Manifest V3 extension for per-site tab volume and mono audio.",
-      "description": "Captures tab audio through an offscreen document, persists settings by hostname, lists audible tabs, and provides settings for volume step size, max volume, persistence, and popup behavior.",
-      "tech": ["TypeScript", "Manifest V3", "Web Audio", "Chrome APIs"],
+      "accent": "#2563eb",
+      "updated": "2026-05-13",
+      "headline": "Manifest V3 in-page image inspector with source discovery, metadata, conversion, and downloads.",
+      "description": "Toggles inspect mode, overlays visible page images, detects img, picture, srcset, background, poster, and SVG image sources, shows dimensions and file details, then saves selected sources as WebP, PNG, JPG, or original GIF.",
+      "tech": ["JavaScript", "Manifest V3", "Offscreen document", "Canvas", "Chrome APIs"],
+      "metrics": [
+        { "label": "Sources", "value": "6 types" },
+        { "label": "Formats", "value": "4" },
+        { "label": "Mode", "value": "Overlay" }
+      ],
       "links": {
-        "repo": "https://github.com/MaxwellMetzner/Volume-Adjuster"
+        "repo": "https://github.com/MaxwellMetzner/ImageInspector"
+      },
+      "preview": "image-inspector"
+    },
+    {
+      "id": "instagram-saver",
+      "order": 16,
+      "name": "Instagram Saver",
+      "repo": "Instagram-Saver",
+      "category": "Chrome Extensions",
+      "type": "Chrome extension",
+      "status": "Source",
+      "accent": "#db2777",
+      "updated": "2026-05-27",
+      "headline": "API-first Chrome extension for downloading Instagram media from the current browser session.",
+      "description": "Supports page media extraction with a download-manager workflow, Chrome extension storage, session-aware access, and batch-oriented controls for saving available Instagram media.",
+      "tech": ["JavaScript", "Manifest V3", "Chrome APIs", "Downloads"],
+      "links": {
+        "repo": "https://github.com/MaxwellMetzner/Instagram-Saver"
       },
       "preview": "extension"
     },
     {
       "id": "chesscom-lichess-link",
-      "order": 9,
+      "order": 17,
       "name": "Chess.com Lichess Link",
       "repo": "Chess.com-Lichess-Link",
-      "category": "Browser Extensions",
+      "category": "Chrome Extensions",
       "type": "Chrome extension",
       "status": "Source",
-      "featured": false,
       "accent": "#65a30d",
       "updated": "2026-03-31",
-      "headline": "A one-click PGN bridge from Chess.com games to Lichess imports.",
+      "headline": "One-click bridge from supported Chess.com game pages into Lichess imports.",
       "description": "Detects supported Chess.com pages, waits for PGN readiness, opens Lichess import with a URL-hash token, and fills the import form in-page without clipboard access or API tokens.",
       "tech": ["TypeScript", "Manifest V3", "Content scripts", "PGN"],
       "links": {
@@ -231,17 +399,16 @@
     },
     {
       "id": "amazon-bestseller-extractor",
-      "order": 10,
+      "order": 18,
       "name": "Amazon Bestseller Extractor",
       "repo": "Amazon-Bestseller-Extractor",
-      "category": "Browser Extensions",
+      "category": "Chrome Extensions",
       "type": "Chrome extension",
       "status": "Source",
-      "featured": false,
       "accent": "#f59e0b",
-      "updated": "2026-03-31",
-      "headline": "A scoped extension for extracting Amazon Best Sellers Rank data from product pages.",
-      "description": "Reads BSR categories from supported storefronts, displays the strongest rank as a toolbar badge, lists category links in a compact popup, and avoids broad host permissions.",
+      "updated": "2026-05-27",
+      "headline": "Scoped extension for extracting Amazon Best Sellers Rank categories and links from product pages.",
+      "description": "Reads rank categories from supported storefronts, surfaces the strongest rank in extension UI, lists category links, and keeps the workflow focused on product-research extraction.",
       "tech": ["JavaScript", "TypeScript", "Manifest V3", "DOM parsing"],
       "links": {
         "repo": "https://github.com/MaxwellMetzner/Amazon-Bestseller-Extractor"
@@ -249,156 +416,40 @@
       "preview": "extension"
     },
     {
-      "id": "instagram-saver",
-      "order": 11,
-      "name": "Instagram Saver",
-      "repo": "Instagram-Saver",
-      "category": "Browser Extensions",
+      "id": "volume-adjuster",
+      "order": 19,
+      "name": "Tab Volume Adjuster",
+      "repo": "Volume-Adjuster",
+      "category": "Chrome Extensions",
       "type": "Chrome extension",
       "status": "Source",
-      "featured": false,
-      "accent": "#db2777",
-      "updated": "2026-03-30",
-      "headline": "A media downloader for Instagram pages available in the user's browser session.",
-      "description": "Supports posts, reels, stories, highlights, profile batches, metadata sidecars, batch reports, folder templates, pacing controls, and checkpointed full-profile crawls.",
-      "tech": ["JavaScript", "Chrome APIs", "Downloads", "Local storage"],
+      "accent": "#06b6d4",
+      "updated": "2026-05-28",
+      "headline": "Focused Manifest V3 extension for per-site tab volume control.",
+      "description": "Captures tab audio through an offscreen document, persists volume settings by hostname, lists audible tabs, and provides controls for step size, max volume, persistence, and popup behavior.",
+      "tech": ["TypeScript", "Manifest V3", "Web Audio", "Chrome APIs"],
       "links": {
-        "repo": "https://github.com/MaxwellMetzner/Instagram-Saver"
+        "repo": "https://github.com/MaxwellMetzner/Volume-Adjuster"
       },
       "preview": "extension"
     },
     {
-      "id": "steam-onenote-sync",
-      "order": 12,
-      "name": "Steam OneNote Sync",
-      "repo": "Steam-OneNote-Sync",
-      "category": "Sync Systems",
-      "type": "CLI app",
+      "id": "school-projects",
+      "order": 20,
+      "name": "School-Projects",
+      "repo": "School-Projects",
+      "category": "Other",
+      "type": "Coursework archive",
       "status": "Source",
-      "featured": false,
-      "accent": "#7c3aed",
-      "updated": "2026-03-20",
-      "headline": "A bidirectional sync bridge between local Steam game notes and Microsoft OneNote.",
-      "description": "Normalizes both systems into a canonical note model, previews push/pull/sync writes, tracks OneNote pages with sidecar state, and projects rich OneNote content back to Steam's safer subset.",
-      "tech": ["Python", "Microsoft Graph", "Device code auth", "Sync engine"],
-      "links": {
-        "repo": "https://github.com/MaxwellMetzner/Steam-OneNote-Sync"
-      },
-      "preview": "sync"
-    },
-    {
-      "id": "path-manager",
-      "order": 13,
-      "name": "PATH Manager",
-      "repo": "PATH-Manager",
-      "category": "Windows Tools",
-      "type": "Desktop app",
-      "status": "Source",
-      "featured": false,
-      "accent": "#475569",
-      "updated": "2026-03-14",
-      "headline": "A safer Windows PATH editor with diagnostics, backups, and diff previews.",
-      "description": "Turns PATH editing into a reorderable UI with user/system scopes, missing-path cleanup, duplicate detection, command shadowing, risk warnings, backup snapshots, and admin-aware saving.",
-      "tech": ["Python", "Tkinter", "Windows Registry", "UX"],
-      "links": {
-        "repo": "https://github.com/MaxwellMetzner/PATH-Manager"
-      },
-      "preview": "desktop"
-    },
-    {
-      "id": "lossless-scaling-wrapper",
-      "order": 14,
-      "name": "Lossless Scaling Wrapper",
-      "repo": "Lossless-Scaling-Wrapper",
-      "category": "Game Tools",
-      "type": "Windows launcher",
-      "status": "Source",
-      "featured": false,
-      "accent": "#0284c7",
-      "updated": "2026-03-29",
-      "headline": "A Windows launcher that starts Lossless Scaling, launches a game, and restores focus.",
-      "description": "Designed for Steam launch options, the wrapper finds Lossless Scaling, starts the target game command, minimizes the scaling window, foregrounds the game, and returns the game's exit code.",
-      "tech": ["C#", ".NET 8", "Windows APIs", "Steam"],
-      "links": {
-        "repo": "https://github.com/MaxwellMetzner/Lossless-Scaling-Wrapper"
-      },
-      "preview": "desktop"
-    },
-    {
-      "id": "chrome-extension-code-viewer",
-      "order": 15,
-      "name": "Chrome Extension Code Viewer",
-      "repo": "Chrome-Extension-Code-Viewer",
-      "category": "Security Tools",
-      "type": "Local web tool",
-      "status": "Source",
-      "featured": false,
-      "accent": "#334155",
-      "updated": "2026-03-25",
-      "headline": "A local extension explorer with permission risk scoring and entry-point maps.",
-      "description": "Scans installed Chrome extensions, resolves localized manifest names, maps popup/background/content-script entry points, scores risky permissions, and can enrich entries with store metadata.",
-      "tech": ["PowerShell", "Localhost UI", "Manifest parsing", "Risk scoring"],
-      "links": {
-        "repo": "https://github.com/MaxwellMetzner/Chrome-Extension-Code-Viewer"
-      },
-      "preview": "terminal"
-    },
-    {
-      "id": "autoclicker",
-      "order": 16,
-      "name": "Autoclicker",
-      "repo": "Autoclicker",
-      "category": "Windows Tools",
-      "type": "Desktop app",
-      "status": "Source",
-      "featured": false,
-      "accent": "#f43f5e",
-      "updated": "2026-03-28",
-      "headline": "A compact always-on-top autoclicker built only with Python standard libraries.",
-      "description": "Supports left, right, and middle clicks, configurable intervals, global hotkeys, a custom dark title bar, and a screen-corner fail-safe.",
-      "tech": ["Python", "Tkinter", "ctypes", "Hotkeys"],
-      "links": {
-        "repo": "https://github.com/MaxwellMetzner/Autoclicker"
-      },
-      "preview": "desktop"
-    },
-    {
-      "id": "2048-game",
-      "order": 17,
-      "name": "2048 Game",
-      "repo": "2048-Game",
-      "category": "Games",
-      "type": "Desktop game",
-      "status": "Source",
-      "featured": false,
-      "accent": "#ea580c",
-      "updated": "2026-03-14",
-      "headline": "A Python implementation of the 2048 tile-merging game.",
-      "description": "A compact game project focused on grid state, tile movement, merge rules, and responsive input handling.",
-      "tech": ["Python", "Pygame", "Game state", "Puzzle game"],
-      "links": {
-        "repo": "https://github.com/MaxwellMetzner/2048-Game"
-      },
-      "preview": "puzzle-small"
-    },
-    {
-      "id": "maxwellmetzner-profile",
-      "order": 18,
-      "name": "GitHub Profile Config",
-      "repo": "MaxwellMetzner",
-      "category": "Profile",
-      "type": "Repository config",
-      "status": "Source",
-      "featured": false,
       "accent": "#64748b",
-      "updated": "2026-03-30",
-      "headline": "The profile README and GitHub profile configuration repository.",
-      "description": "A supporting repository for keeping the public GitHub profile consistent with the portfolio narrative and current technical focus.",
-      "tech": ["Markdown", "GitHub Profile", "Documentation"],
+      "updated": "2023-03-18",
+      "headline": "Coding assignments from Stevens Institute of Technology coursework between 2019 and 2023.",
+      "description": "A public archive of academic programming assignments and supporting material from the computer science degree path.",
+      "tech": ["OCaml", "Coursework", "Algorithms", "Systems"],
       "links": {
-        "repo": "https://github.com/MaxwellMetzner/MaxwellMetzner"
+        "repo": "https://github.com/MaxwellMetzner/School-Projects"
       },
-      "preview": "terminal"
+      "preview": "coursework"
     }
   ]
 }
