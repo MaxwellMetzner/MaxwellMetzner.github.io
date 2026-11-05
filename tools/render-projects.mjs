@@ -84,7 +84,7 @@ function renderProjectExplorer(projects, categories) {
             <div class="project-console__header">
               <div>
                 <p class="eyebrow">Project explorer</p>
-                <h3>Focused project explorer.</h3>
+                <h3>Browse the work by surface.</h3>
               </div>
               <div class="project-console__meta" aria-label="Project catalog summary">
                 <span>${escapeHtml(totalLabel)}</span>
@@ -101,8 +101,8 @@ ${renderCategoryButtons(categories, projects)}
                 <div class="project-stage__tools">
                   <div class="project-stage__copy">
                     <p class="eyebrow" data-project-kicker>Awaiting category</p>
-                    <h3 data-project-title>No project group selected.</h3>
-                    <p data-project-copy>The showcase stays focused until a category is selected.</p>
+                    <h3 data-project-title>Select a project surface.</h3>
+                    <p data-project-copy>Choose a category to see a concise list of projects and open the demo or source.</p>
                   </div>
                   <label class="search-box project-search">
                     <span class="sr-only">Search selected projects</span>
@@ -118,7 +118,7 @@ ${renderCategoryButtons(categories, projects)}
                   <div>
                     <p class="eyebrow" data-project-empty-kicker>Ready</p>
                     <h3 data-project-empty-title>Pick a category.</h3>
-                    <p data-project-empty-copy>Category cards on the left control which projects are rendered here.</p>
+                    <p data-project-empty-copy>The catalog will keep the details light so the work is easy to scan.</p>
                   </div>
                 </div>
 

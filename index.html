@@ -384,6 +384,7 @@
 
     <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
       <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
       <a href="#system">System</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
@@ -454,8 +455,8 @@
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">Project catalog</p>
-          <h2>Pick a category, then inspect the build.</h2>
-          <p>The portfolio is organized by delivery surface: live web demos, Dockerized services, standalone apps, Chrome extensions, and archive work. Each category loads as a focused grid so the page does not bury the signal under every project at once.</p>
+          <h2>Pick a category, then follow the thread.</h2>
+          <p>These projects span live web demos, Dockerized services, standalone apps, Chrome extensions, and archive work. The explorer keeps the first pass intentionally light; open a demo or repository when a project earns a closer look.</p>
         </div>
 
         <div class="project-explorer-shell" id="project-explorer">
@@ -464,7 +465,7 @@
             <div class="project-console__header">
               <div>
                 <p class="eyebrow">Project explorer</p>
-                <h3>Focused project explorer.</h3>
+                <h3>Browse the work by surface.</h3>
               </div>
               <div class="project-console__meta" aria-label="Project catalog summary">
                 <span>20 projects</span>
@@ -520,8 +521,8 @@
                 <div class="project-stage__tools">
                   <div class="project-stage__copy">
                     <p class="eyebrow" data-project-kicker>Awaiting category</p>
-                    <h3 data-project-title>No project group selected.</h3>
-                    <p data-project-copy>The showcase stays focused until a category is selected.</p>
+                    <h3 data-project-title>Select a project surface.</h3>
+                    <p data-project-copy>Choose a category to see a concise list of projects and open the demo or source.</p>
                   </div>
                   <label class="search-box project-search">
                     <span class="sr-only">Search selected projects</span>
@@ -537,7 +538,7 @@
                   <div>
                     <p class="eyebrow" data-project-empty-kicker>Ready</p>
                     <h3 data-project-empty-title>Pick a category.</h3>
-                    <p data-project-empty-copy>Category cards on the left control which projects are rendered here.</p>
+                    <p data-project-empty-copy>The catalog will keep the details light so the work is easy to scan.</p>
                   </div>
                 </div>
 
@@ -1473,6 +1474,38 @@
             </div>
           </div>
 <!-- FEATURED_PROJECTS_END -->
+        </div>
+      </div>
+    </section>
+
+    <section class="experience section-band" id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Experience that shapes the work</p>
+          <h2>Enterprise discipline, security awareness, and practical automation.</h2>
+          <p>The projects are easier to understand in context: I like working where software meets real operational constraints, existing systems, and people who need the result to be dependable.</p>
+        </div>
+        <div class="experience-grid">
+          <article class="experience-card experience-card--featured">
+            <div class="experience-card__top"><span>2023–2026</span><span>Fiserv</span></div>
+            <h3>Software Engineer · Technology Analyst</h3>
+            <p>Built and supported enterprise teller and core-banking software in C#/.NET, WPF/WinForms, SQL Server, and REST/SOAP service layers.</p>
+            <ul>
+              <li>Investigated production defects across mature application, configuration, database, and service boundaries.</li>
+              <li>Created mock-user generation, large-log analysis, and workflow utilities for engineering and QA teams.</li>
+              <li>Contributed to installer modernization, security remediation, test automation, release coordination, and audit-ready delivery.</li>
+            </ul>
+          </article>
+          <article class="experience-card">
+            <div class="experience-card__top"><span>2021–2023</span><span>Eisai US</span></div>
+            <h3>Security Operations Intern</h3>
+            <p>Supported SIEM monitoring, suspicious-email response, compliance reporting, MITRE ATT&amp;CK research, and Python workflow automation in a regulated environment.</p>
+          </article>
+          <article class="experience-card">
+            <div class="experience-card__top"><span>2022–2023</span><span>TLCengine</span></div>
+            <h3>Senior Design · FX trading prototype</h3>
+            <p>Worked on predictive modeling in Python, MQL5-to-Python integration, and Docker/Kubernetes exploration as part of a six-person team.</p>
+          </article>
         </div>
       </div>
     </section>

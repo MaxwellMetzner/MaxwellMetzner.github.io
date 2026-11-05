@@ -145,7 +145,7 @@
       if (grid) grid.hidden = !activeCategory || visibleCards.length === 0;
 
       if (!activeCategory) {
-        setEmptyState('Ready', 'Pick a category.', 'Category cards on the left control which projects are rendered here.');
+        setEmptyState('Ready', 'Pick a category.', 'The catalog will keep the details light so the work is easy to scan.');
         if (emptyState) emptyState.hidden = false;
         announce('No project category selected');
         return;
